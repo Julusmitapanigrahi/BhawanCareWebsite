@@ -1,0 +1,208 @@
+{
+  "Header": {
+    "title": "Bhawan Care",
+    "paragraph": "Join us in creating a community where ideas flourish, friendships thrive, and together, we shape a better tomorrow."
+  },
+  "About": {
+    "paragraph": "Bhawan Care is a leading provider of community management solutions designed to simplify and enhance living in residential complexes. Our innovative application streamlines essential services such as security management, visitor tracking, facility booking, and communication between residents and management. Bhawan Care aims to create a seamless and secure living experience by integrating advanced technology with user-friendly features. Join Bhawan Care today and experience efficient and effective community management at your fingertips.",
+    "Why": [
+      "Lorem ipsum dolor",
+      "Tempor incididunt",
+      "Lorem ipsum dolor",
+      "Incididunt ut labore"
+    ],
+    "Why2": [
+      "Aliquip ex ea commodo",
+      "Lorem ipsum dolor",
+      "Exercitation ullamco",
+      "Lorem ipsum dolor"
+    ]
+  },
+  "Gallery": [
+    {
+      "title": "Notice Board",
+      "paragraph": "Stay updated with the latest announcements, events, and notices from the society management. Our digital notice board ensures that all important information is easily accessible to all residents.",
+      "largeImage": "img/portfolio/01-large.jpg",
+      "smallImage": "img/portfolio/01-small.jpg"
+    },
+    {
+      "title": "Apply for Amenities",
+      "paragraph": "Book society amenities such as the clubhouse, swimming pool, or gym through our app. Check availability, make reservations, and enjoy the facilities without any hassle.",
+      "largeImage": "img/portfolio/02-large.jpg",
+      "smallImage": "img/portfolio/02-small.jpg"
+    },
+    {
+      "title": "Worker Details",
+      "paragraph": "Access a verified list of domestic help and service providers within the society. Find detailed profiles, contact information, and reviews to hire reliable workers.",
+      "largeImage": "img/portfolio/03-large.jpg",
+      "smallImage": "img/portfolio/03-small.jpg"
+    },
+    {
+      "title": "Society and Flats Information",
+      "paragraph": "Get comprehensive information about the society and individual flats. This includes floor plans, amenities, bylaws, and other essential details for both current and prospective residents.",
+      "largeImage": "img/portfolio/04-large.jpg",
+      "smallImage": "img/portfolio/04-small.jpg"
+    },
+    {
+      "title": "Emergency Contacts",
+      "paragraph": "Quickly access important emergency contacts, including security, medical services, and society management. Ensure you have all the necessary information at your fingertips during urgent situations.",
+      "largeImage": "img/portfolio/05-large.jpg",
+      "smallImage": "img/portfolio/05-small.jpg"
+    },
+    {
+      "title": "Meeting Arrangement",
+      "paragraph": "Schedule and manage society meetings effortlessly. Send invites, set agendas, and keep track of meeting minutes, all through the app.",
+      "largeImage": "img/portfolio/06-large.jpg",
+      "smallImage": "img/portfolio/06-small.jpg"
+    },
+    {
+      "title": "Feedback and Suggestions",
+      "paragraph": "Provide your feedback and suggestions to the society management directly through the app. This feature ensures that your voice is heard and helps improve community living.",
+      "largeImage": "img/portfolio/07-large.jpg",
+      "smallImage": "img/portfolio/07-small.jpg"
+    },
+    {
+      "title": "Society Rules",
+      "paragraph": "Our society rules ensure a respectful and harmonious environment, covering noise control, waste management, parking regulations, pet policies and more for better living.",
+      "largeImage": "img/portfolio/08-large.jpg",
+      "smallImage": "img/portfolio/08-small.jpg"
+    },
+    {
+      "title": "Society Collections, and Expenses",
+      "paragraph": "Transparency and accountability are key in our society's financial management. This section provides detailed information about bank accounts, payment methods, and records of collections and expenses.",
+      "largeImage": "img/portfolio/09-large.jpg",
+      "smallImage": "img/portfolio/09-small.jpg"
+    }
+  ],
+  "Services": [
+    {
+      "icon": "fa fa-shield",
+      "name": "Security Guard",
+      "text": "Our app offers robust security management, with real-time monitoring of visitor entries and exits. Residents receive instant notifications for enhanced safety and transparency."
+    },
+    {
+      "icon": "fa fa-car",
+      "name": "Garage on Rent",
+      "text": "Easily find and rent available garages within the society using our app. Owners can list garages, and tenants can book them with a few clicks, simplifying parking space management and maximizing garage utilization."
+    },
+    {
+      "icon": "fa fa-cog",
+      "name": "Request a Service",
+      "text": "Need plumbing, electrical, or other household services? Our app connects you with verified professionals in the society, allowing you to request services, track progress, and communicate directly for timely resolutions."
+    },
+    {
+      "icon": "fa fa-wrench",
+      "name": "Maintenance Charge",
+      "text": "Manage and pay maintenance charges effortlessly through our app. Get reminders for upcoming dues, view detailed breakdowns, and make secure online payments, ensuring transparency and simplicity."
+    },
+    {
+      "icon": "fa fa-calendar",
+      "name": "Festival Booking",
+      "text": "Plan and join society festivals easily with our booking feature. Stay updated on events, reserve your spot, and contribute to celebrations, fostering community spirit and smooth event coordination."
+    },
+    {
+      "icon": "fa fa-check",
+      "name": "Election",
+      "text": "Hold society elections efficiently with our management feature. Nominate candidates, vote, and view results in real-time through the app, ensuring a fair process and boosting community engagement."
+    }
+  ],
+  "Testimonials": [
+    {
+      "img": "img/testimonials/01.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "John Doe"
+    },
+    {
+      "img": "img/testimonials/02.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "Johnathan Doe"
+    },
+    {
+      "img": "img/testimonials/03.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "John Doe"
+    },
+    {
+      "img": "img/testimonials/04.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "Johnathan Doe"
+    },
+    {
+      "img": "img/testimonials/05.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "John Doe"
+    },
+    {
+      "img": "img/testimonials/06.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "Johnathan Doe"
+    }
+  ],
+  "DownloadApp": [
+    {
+      "img": "img/team/appstore.gif",
+      "name": "Mike Doe",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/playstore.gif",
+      "name": "Jane Doe",
+      "job": "Senior Designer"
+    }
+    
+  ],
+
+  "Team": [
+    {
+      "img": "img/team/01.jpg",
+      "name": "Sibasis Sahu",
+      "job": "Managing Director"
+    },
+    {
+      "img": "img/team/02.jpg",
+      "name": "Mike Doe",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/03.jpg",
+      "name": "Jane Doe",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/04.jpg",
+      "name": "Karen Doe",
+      "job": "Project Manager"
+    }
+  ],
+
+  "Contact": {
+    "address": "3rd Floor, Bhawan Care, Radhamani Building, 123, Jayadev Vihar Rd, Block N5, IRC Village, Nayapalli, Bhubaneswar, Odisha 751013 ",
+    "phone": "078943 18795",
+    "email": "info@cpsorg24.com",
+    "facebook": "fb.com",
+    "twitter": "twitter.com",
+    "youtube": "youtube.com"
+  },
+  "Features": [
+    {
+      "icon": "fa fa-building",
+      "title": "Admin",
+      "text": "Easily manage maintenance charges, track visitors in real-time, and organize community events."
+    },
+    {
+      "icon": "fa fa-home",
+      "title": "Owner",
+      "text": "Manage maintenance, get visitor alerts with gate notifications, and stay updated on events."
+    },
+    {
+      "icon": "fa fa-group",
+      "title": "Tenant",
+      "text": "Track and settle maintenance dues online, get instant visitor alerts, and stay updated on society events. "
+    },
+    {
+      "icon": "fa fa-shield",
+      "title": "Security Guard",
+      "text": "Seamlessly manage visitor entries, ensure safety with tracking, and coordinate community security during events."
+    }
+  ]
+}
