@@ -35,6 +35,16 @@ const AnimatedComponent = ({ animationType, direction = 'left', children, text, 
       transform: isHovered ? 'translateY(-10px)' : 'translateY(0)',
       config: { tension: 500, friction: 10 },
     }),
+    fadeInUp: useSpring({
+      opacity: inView ? 1 : 0,
+      transform: inView ? 'translateY(0)' : 'translateY(20px)',
+      config: { duration: 1000 },
+    }),
+    zoomIn: useSpring({
+      transform: inView ? 'scale(1)' : 'scale(0.5)',
+      opacity: inView ? 1 : 0,
+      config: { duration: 500 },
+    }),
     typewriter: { text: typewriterConfig[0], cursor: <Cursor /> },
   };
 

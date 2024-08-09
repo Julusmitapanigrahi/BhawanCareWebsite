@@ -6,9 +6,9 @@ export const DownloadApp = (props) => {
         <div id="app" className="text-center">
             <div className="container">
                 <div className="col-md-8 col-md-offset-2 section-title">
-                    <AnimatedComponent animationType="slideIn" direction="left">
+        <AnimatedComponent animationType="scaleUp" >
                         <h2>Download the App</h2>
-                    </AnimatedComponent>
+                        </AnimatedComponent>
                     <p>Available on Play Store and App Store</p>
                 </div>
                 <div id="row">
@@ -19,7 +19,10 @@ export const DownloadApp = (props) => {
                                 className="col-md-3 col-sm-6 col-md-offset-2 team"
                             >
                                 <div className="thumbnail">
-                                    {" "}  <img src={d.img} alt="..." className="team-img" />
+                                    {" "}  
+                                    <AnimatedComponent animationType="zoomIn" >
+                                    <img src={d.img} alt="..." className="team-img" />
+                                    </AnimatedComponent>
                                         <div className="caption">
                                             {/* <h4>{d.name}</h4>
                                             <p>{d.job}</p> */}

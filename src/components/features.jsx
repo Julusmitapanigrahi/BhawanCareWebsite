@@ -6,10 +6,9 @@ export const Features = (props) => {
     <div id="features" className="text-center">
       <div className="container">
         <div className="col-md-10 col-md-offset-1 section-title">
-        <AnimatedComponent animationType="slideIn">
-
-          <h2>Our Society Services</h2>
-          </AnimatedComponent>
+        <AnimatedComponent animationType="scaleUp" >
+        <h2>Our Society Services</h2>
+        </AnimatedComponent>
         </div>
         <div className="row">
           {props.data
