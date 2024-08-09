@@ -6,7 +6,7 @@ export const Services = (props) => {
     <div id="services" className="text-center">
       <div className="container">
         <div className="section-title">
-        <AnimatedComponent animationType="slideIn" direction="left">
+        <AnimatedComponent animationType="scaleUp" >
           <h2>Comprehensive Society Management Features</h2>
           </AnimatedComponent>
           <p>
@@ -18,7 +18,9 @@ export const Services = (props) => {
             ? props.data.map((d, i) => (
                 <div key={`${d.name}-${i}`} className="col-md-4">
                   {" "}
+                  {/* <AnimatedComponent animationType="slideIn" direction="left"> */}
                   <i className={d.icon}></i>
+                  {/* </AnimatedComponent> */}
                   <div className="service-desc">
                     <h3>{d.name}</h3>
                     <p>{d.text}</p>

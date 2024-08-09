@@ -6,7 +6,7 @@ export const Team = (props) => {
     <div id="team" className="text-center">
       <div className="container">
         <div className="col-md-8 col-md-offset-2 section-title">
-        <AnimatedComponent animationType="slideIn" direction="left">
+        <AnimatedComponent animationType="scaleUp" >
           <h2>Meet the Team</h2>
           </AnimatedComponent>
           <p>
@@ -20,7 +20,9 @@ export const Team = (props) => {
                 <div key={`${d.name}-${i}`} className="col-md-3 col-sm-6 team">
                   <div className="thumbnail">
                     {" "}
+                    <AnimatedComponent animationType="fadeIn">
                     <img src={d.img} alt="..." className="team-img" />
+                    </AnimatedComponent>
                     <div className="caption">
                       <h4>{d.name}</h4>
                       <p>{d.job}</p>

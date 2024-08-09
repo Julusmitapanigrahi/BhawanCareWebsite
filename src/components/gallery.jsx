@@ -7,32 +7,31 @@ export const Gallery = (props) => {
     <div id="portfolio" className="text-center">
       <div className="container">
         <div className="section-title">
-        <AnimatedComponent animationType="slideIn" direction="left">
+        <AnimatedComponent animationType="scaleUp" >
           <h2>Additional Features</h2>
           </AnimatedComponent>
           <p>
-           Enhancing Community Experience and Engagement
+            Enhancing Community Experience and Engagement
           </p>
         </div>
         <div className="row">
           <div className="portfolio-items">
             {props.data
               ? props.data.map((d, i) => (
-                  <div
-                    key={`${d.title}-${i}`}
-                    className="col-sm-6 col-md-4 col-lg-4"
-                  >
-          <AnimatedComponent animationType="fadeIn">
-
+                <div
+                  key={`${d.title}-${i}`}
+                  className="col-sm-6 col-md-4 col-lg-4"
+                >
+                  <AnimatedComponent animationType="fadeIn">
                     <Image
                       title={d.title}
                       paragraph={d.paragraph}
                       largeImage={d.largeImage}
                       smallImage={d.smallImage}
                     />
-                    </AnimatedComponent>
-                  </div>
-                ))
+                  </AnimatedComponent>
+                </div>
+              ))
               : "Loading..."}
           </div>
         </div>

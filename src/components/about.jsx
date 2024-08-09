@@ -14,9 +14,9 @@ export const About = (props) => {
           </div>
           <div className="col-xs-12 col-md-6">
             <div className="about-text">
-            {/* <AnimatedComponent animationType="slideIn" direction="left"> */}
+            <AnimatedComponent animationType="scaleUp" >
               <h2>About Us</h2>
-              {/* </AnimatedComponent> */}
+              </AnimatedComponent>
               <p>{props.data ? props.data.paragraph : "loading..."}</p>
               <h3>Why Choose Us?</h3>
               <div className="list-style">
