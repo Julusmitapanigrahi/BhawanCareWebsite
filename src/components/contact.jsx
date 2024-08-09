@@ -1,6 +1,7 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import React from "react";
+import AnimatedComponent from "./animation";
 
 const initialState = {
   name: "",
@@ -15,14 +16,14 @@ export const Contact = (props) => {
     setState((prevState) => ({ ...prevState, [name]: value }));
   };
   const clearState = () => setState({ ...initialState });
-  
-  
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(name, email, message);
-    
+
     {/* replace below with your own Service ID, Template ID and Public Key from your EmailJS account */ }
-    
+
     emailjs
       .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_PUBLIC_KEY")
       .then(
@@ -42,7 +43,9 @@ export const Contact = (props) => {
           <div className="col-md-8">
             <div className="row">
               <div className="section-title">
-                <h2>Get In Touch</h2>
+                <AnimatedComponent animationType="slideIn" direction="left">
+                  <h2>Get In Touch</h2>
+                </AnimatedComponent>
                 <p>
                   Please fill out the form below to send us an email and we will
                   get back to you as soon as possible.
@@ -130,19 +133,25 @@ export const Contact = (props) => {
               <div className="social">
                 <ul>
                   <li>
-                    <a href={props.data ? props.data.facebook : "/"}>
-                      <i className="fa fa-facebook"></i>
-                    </a>
+                    <AnimatedComponent animationType="bounce" >
+                      <a href={props.data ? props.data.facebook : "/"}>
+                        <i className="fa fa-facebook"></i>
+                      </a>
+                    </AnimatedComponent>
                   </li>
                   <li>
-                    <a href={props.data ? props.data.twitter : "/"}>
-                      <i className="fa fa-twitter"></i>
-                    </a>
+                    <AnimatedComponent animationType="bounce" >
+                      <a href={props.data ? props.data.twitter : "/"}>
+                        <i className="fa fa-twitter"></i>
+                      </a>
+                    </AnimatedComponent>
                   </li>
                   <li>
-                    <a href={props.data ? props.data.youtube : "/"}>
-                      <i className="fa fa-youtube"></i>
-                    </a>
+                    <AnimatedComponent animationType="bounce" >
+                      <a href={props.data ? props.data.youtube : "/"}>
+                        <i className="fa fa-youtube"></i>
+                      </a>
+                    </AnimatedComponent>
                   </li>
                 </ul>
               </div>

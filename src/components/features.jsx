@@ -1,11 +1,15 @@
 import React from "react";
+import AnimatedComponent from "./animation";
 
 export const Features = (props) => {
   return (
     <div id="features" className="text-center">
       <div className="container">
         <div className="col-md-10 col-md-offset-1 section-title">
+        <AnimatedComponent animationType="slideIn">
+
           <h2>Our Society Services</h2>
+          </AnimatedComponent>
         </div>
         <div className="row">
           {props.data

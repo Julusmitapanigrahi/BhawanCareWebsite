@@ -1,3 +1,4 @@
+import AnimatedComponent from "./animation";
 import { Image } from "./image";
 import React from "react";
 
@@ -6,9 +7,11 @@ export const Gallery = (props) => {
     <div id="portfolio" className="text-center">
       <div className="container">
         <div className="section-title">
-          <h2>Gallery</h2>
+        <AnimatedComponent animationType="slideIn" direction="left">
+          <h2>Additional Features</h2>
+          </AnimatedComponent>
           <p>
-          Additional Features Enhancing Community Experience and Engagement
+           Enhancing Community Experience and Engagement
           </p>
         </div>
         <div className="row">
@@ -19,12 +22,15 @@ export const Gallery = (props) => {
                     key={`${d.title}-${i}`}
                     className="col-sm-6 col-md-4 col-lg-4"
                   >
+          <AnimatedComponent animationType="fadeIn">
+
                     <Image
                       title={d.title}
                       paragraph={d.paragraph}
                       largeImage={d.largeImage}
                       smallImage={d.smallImage}
                     />
+                    </AnimatedComponent>
                   </div>
                 ))
               : "Loading..."}
