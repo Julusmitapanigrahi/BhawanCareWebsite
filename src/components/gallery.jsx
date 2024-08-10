@@ -26,7 +26,7 @@ export const Gallery = (props) => {
                     <Image
                       title={d.title}
                       paragraph={d.paragraph}
-                      largeImage={d.largeImage}
+                      // largeImage={d.largeImage}
                       smallImage={d.smallImage}
                     />
                   </AnimatedComponent>

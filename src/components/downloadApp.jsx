@@ -28,7 +28,7 @@ export const DownloadApp = (props) => {
                                             <p>{d.job}</p> */}
                                             <AnimatedComponent animationType="bounce" >
                                             <a
-                                                href="#features"
+                                                // href="#features"
                                                 className="btn btn-custom btn-lg page-scroll"
                                             >
                                                 Download App

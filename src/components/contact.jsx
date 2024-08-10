@@ -132,21 +132,21 @@ export const Contact = (props) => {
                 <ul>
                   <li>
                     <AnimatedComponent animationType="bounce" >
-                      <a href={props.data ? props.data.facebook : "/"}>
+                      <a>
                         <i className="fa fa-facebook"></i>
                       </a>
                     </AnimatedComponent>
                   </li>
                   <li>
                     <AnimatedComponent animationType="bounce" >
-                      <a href={props.data ? props.data.twitter : "/"}>
+                      <a>
                         <i className="fa fa-twitter"></i>
                       </a>
                     </AnimatedComponent>
                   </li>
                   <li>
                     <AnimatedComponent animationType="bounce" >
-                      <a href={props.data ? props.data.youtube : "/"}>
+                      <a>
                         <i className="fa fa-youtube"></i>
                       </a>
                     </AnimatedComponent>

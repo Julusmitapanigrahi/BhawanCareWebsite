@@ -254,11 +254,10 @@ header .intro-text {
 }
 /* Features Section */
 #features {
-  /* background: #f6f6f6; */
-  padding: 100px 0;
+  /* padding: 100px 0; */
   background: linear-gradient(to right, #FEFAEE 0%, #FEFAEE 50%);
-
 }
+
 #features i.fa {
   font-size: 38px;
   margin-bottom: 20px;
@@ -271,6 +270,7 @@ header .intro-text {
   background: linear-gradient(to right, #FFF2C1 0%, #E8A905 100%);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
 }
+
 /* About Section */
 #about {
   padding: 100px 0;
