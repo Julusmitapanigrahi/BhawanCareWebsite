@@ -183,26 +183,27 @@
     "twitter": "twitter.com",
     "youtube": "youtube.com"
   },
-  "Features": [
-    {
-      "icon": "fa fa-building",
-      "title": "Admin",
-      "text": "Easily manage maintenance charges, track visitors in real-time, and organize community events."
-    },
-    {
-      "icon": "fa fa-home",
-      "title": "Owner",
-      "text": "Manage maintenance, get visitor alerts with gate notifications, and stay updated on events."
-    },
-    {
-      "icon": "fa fa-group",
-      "title": "Tenant",
-      "text": "Track and settle maintenance dues online, get instant visitor alerts, and stay updated on society events. "
-    },
-    {
-      "icon": "fa fa-shield",
-      "title": "Security Guard",
-      "text": "Seamlessly manage visitor entries, ensure safety with tracking, and coordinate community security during events."
-    }
-  ]
+ "Features": [
+  {
+    "icon": "fa fa-building",
+    "title": "Admin",
+    "text": "Easily manage dues, monitor visitors, and organize community events efficiently."
+  },
+  {
+    "icon": "fa fa-home",
+    "title": "Owner",
+    "text": "Handle maintenance, receive visitor alerts, and stay informed on community events."
+  },
+  {
+    "icon": "fa fa-group",
+    "title": "Tenant",
+    "text": "Pay maintenance online, get visitor notifications, and stay informed on society events."
+  },
+  {
+    "icon": "fa fa-shield",
+    "title": "Security Guard",
+    "text": "Manage visitor entries, ensure safety, and coordinate security for community events."
+  }
+]
+
 }
