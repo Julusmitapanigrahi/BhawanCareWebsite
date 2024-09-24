@@ -7,7 +7,7 @@ export const Services = (props) => {
       <div className="container">
         <div className="section-title">
         <AnimatedComponent animationType="scaleUp" >
-          <h2>Comprehensive Society Management Features</h2>
+          <h2>Features We Provide</h2>
           </AnimatedComponent>
           <p>
           Essential Features for Seamless Society Living
@@ -16,7 +16,7 @@ export const Services = (props) => {
         <div className="row">
           {props.data
             ? props.data.map((d, i) => (
-                <div key={`${d.name}-${i}`} className="col-md-4">
+                <div key={`${d.name}-${i}`} className="col-md-3">
                   {" "}
                   {/* <AnimatedComponent animationType="slideIn" direction="left"> */}
                   <i className={d.icon}></i>

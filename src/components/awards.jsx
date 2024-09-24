@@ -64,7 +64,7 @@ export const Awards = () => {
   return (
     <div className="awards-section" ref={awardsRef}>
       <AnimatedComponent animationType="scaleUp" >
-      <h2>Awards & Recognitions</h2>
+      <h2>We Contribute To</h2>
       </AnimatedComponent>
       <div className="awards-display">
         {awards.map((award, index) => (

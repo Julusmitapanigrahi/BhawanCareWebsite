@@ -77,32 +77,42 @@
   "Services": [
     {
       "icon": "fa fa-shield",
-      "name": "Security Guard",
+      "name": "Voting",
       "text": "Our app offers robust security management, with real-time monitoring of visitor entries and exits. Residents receive instant notifications for enhanced safety and transparency."
     },
     {
       "icon": "fa fa-car",
-      "name": "Garage on Rent",
+      "name": "Festival",
       "text": "Easily find and rent available garages within the society using our app. Owners can list garages, and tenants can book them with a few clicks, simplifying parking space management and maximizing garage utilization."
     },
     {
       "icon": "fa fa-cog",
-      "name": "Request a Service",
+      "name": "Notice Board",
       "text": "Need plumbing, electrical, or other household services? Our app connects you with verified professionals in the society, allowing you to request services, track progress, and communicate directly for timely resolutions."
     },
     {
       "icon": "fa fa-wrench",
-      "name": "Maintenance Charge",
+      "name": "Emergency Contact",
       "text": "Manage and pay maintenance charges effortlessly through our app. Get reminders for upcoming dues, view detailed breakdowns, and make secure online payments, ensuring transparency and simplicity."
     },
     {
       "icon": "fa fa-calendar",
-      "name": "Festival Booking",
+      "name": "Complaint Box",
       "text": "Plan and join society festivals easily with our booking feature. Stay updated on events, reserve your spot, and contribute to celebrations, fostering community spirit and smooth event coordination."
     },
     {
       "icon": "fa fa-check",
       "name": "Election",
+      "text": "Hold society elections efficiently with our management feature. Nominate candidates, vote, and view results in real-time through the app, ensuring a fair process and boosting community engagement."
+    },
+    {
+      "icon": "fa fa-calendar",
+      "name": "Suggestin Box",
+      "text": "Plan and join society festivals easily with our booking feature. Stay updated on events, reserve your spot, and contribute to celebrations, fostering community spirit and smooth event coordination."
+    },
+    {
+      "icon": "fa fa-check",
+      "name": "Arrang Meeting",
       "text": "Hold society elections efficiently with our management feature. Nominate candidates, vote, and view results in real-time through the app, ensuring a fair process and boosting community engagement."
     }
   ],
@@ -149,9 +159,7 @@
       "name": "Jane Doe",
       "job": "Senior Designer"
     }
-    
   ],
-
   "Team": [
     {
       "img": "img/team/01.jpg",
@@ -174,7 +182,6 @@
       "job": "Project Manager"
     }
   ],
-
   "Contact": {
     "address": "Block - N5/123, 3rd floor, Radhamani Building, Jayadev Vihar Rd, Bhubaneswar, Odisha 751013",
     "phone": "+91 78943 18795",
@@ -183,27 +190,204 @@
     "twitter": "twitter.com",
     "youtube": "youtube.com"
   },
- "Features": [
-  {
-    "icon": "fa fa-building",
-    "title": "Admin",
-    "text": "Easily manage dues, monitor visitors, and organize community events efficiently."
+  "Common": {
+    "Admin": [
+      {
+        "title": "Maintenance made easy",
+        "paragraph": "Quickly and efficiently handle maintenance requests from owners, tenants or property managers.",
+        "largeImage": "../img/portfolio/01-large.jpg"
+      },
+      {
+        "title": "Efficiently manage election processes",
+        "paragraph": "Admins can seamlessly manage and oversee election processes with our comprehensive election feature.",
+        "largeImage": "../img/portfolio/02-large.jpg"
+      },
+      {
+        "title": "Effortlessly arrange meeting details",
+        "paragraph": " This tool allows admins to set meeting times, and manage schedules efficiently.",
+        "largeImage": "../img/portfolio/04-large.jpg"
+      },
+      {
+        "title": "Securely manage bank details",
+        "paragraph": "Efficiently manage and secure all bank details with our comprehensive tool.",
+        "largeImage": "../img/portfolio/03-large.jpg"
+      }
+    ],
+    "Owner": [
+      {
+        "title": "Easily add and track complaints",
+        "paragraph": "The 'Add Complaint Details' feature allows owners to write the complaints within the system.",
+        "largeImage": "../img/portfolio/01-large.jpg"
+      },
+      {
+        "title": "Please submit your request for our services here.",
+        "paragraph": " you can easily submit a service request to address your needs.",
+        "largeImage": "../img/portfolio/02-large.jpg"
+      },
+      {
+        "title": "Rate your experience and help us improve today",
+        "paragraph": "Share your feedback to enhance our services! By rating your experience, you not only help us identify areas for improvement but also contribute to a better community.",
+        "largeImage": "../img/portfolio/03-large.jpg"
+      },
+      {
+        "title": "Experienced owner applying for civil work opportunities",
+        "paragraph": "As an experienced owner, I am eager to apply my skills in civil project management and execution.",
+        "largeImage": "../img/portfolio/04-large.jpg"
+      }
+    ],
+    "Tenant": [
+      {
+        "title": "Dual Power with In-built WiFi + Bluetooth",
+        "paragraph": "No extra hubs needed for seamless remote access.",
+        "largeImage": "../img/portfolio/01-large.jpg"
+      },
+      {
+        "title": "Apply for Amenities",
+        "paragraph": "Customise access for family, friends, and daily helps with ease.",
+        "largeImage": "../img/portfolio/02-large.jpg"
+      },
+      {
+        "title": "Worker Details",
+        "paragraph": "Receive immediate alerts for tampering or forced entry.",
+        "largeImage": "../img/portfolio/03-large.jpg"
+      },
+      {
+        "title": "Society and Flats Information",
+        "paragraph": "Get instant alerts when the door is unlocked.",
+        "largeImage": "../img/portfolio/04-large.jpg"
+      }
+    ],
+    "Security": [
+      {
+        "title": "Dual Power with In-built WiFi + Bluetooth",
+        "paragraph": "No extra hubs needed for seamless remote access.",
+        "largeImage": "../img/portfolio/01-large.jpg"
+      },
+      {
+        "title": "Apply for Amenities",
+        "paragraph": "Customise access for family, friends, and daily helps with ease.",
+        "largeImage": "../img/portfolio/02-large.jpg"
+      },
+      {
+        "title": "Worker Details",
+        "paragraph": "Receive immediate alerts for tampering or forced entry.",
+        "largeImage": "../img/portfolio/03-large.jpg"
+      },
+      {
+        "title": "Society and Flats Information",
+        "paragraph": "Get instant alerts when the door is unlocked.",
+        "largeImage": "../img/portfolio/04-large.jpg"
+      }
+    ]
   },
-  {
-    "icon": "fa fa-home",
-    "title": "Owner",
-    "text": "Handle maintenance, receive visitor alerts, and stay informed on community events."
-  },
-  {
-    "icon": "fa fa-group",
-    "title": "Tenant",
-    "text": "Pay maintenance online, get visitor notifications, and stay informed on society events."
-  },
-  {
-    "icon": "fa fa-shield",
-    "title": "Security Guard",
-    "text": "Manage visitor entries, ensure safety, and coordinate security for community events."
-  }
-]
-
+  "Features": [
+    {
+      "icon": "fa fa-building",
+      "title": "Admin",
+      "text": "Easily manage dues, monitor visitors, and organize community events efficiently.",
+      "route": "admin"
+    },
+    {
+      "icon": "fa fa-home",
+      "title": "Owner",
+      "text": "Handle maintenance, receive visitor alerts, and stay informed on community events.",
+      "route": "owner"
+    },
+    {
+      "icon": "fa fa-group",
+      "title": "Tenant",
+      "text": "Pay maintenance online, get visitor notifications, and stay informed on society events.",
+      "route": "tenant"
+    },
+    {
+      "icon": "fa fa-shield",
+      "title": "Security Guard",
+      "text": "Manage visitor entries, ensure safety, and coordinate security for community events.",
+      "route": "security"
+    }
+  ],
+  "AllFeature": [
+    {
+      "title": "Maintenance Charge",
+      "text": "Description of feature 1Description of feature 1Description of feature 1Description of feature 1Description of feature 1Description of feature 1Description of feature 1Description of feature 1Description of feature 1"
+    },
+    {
+      "title": "Create Election",
+      "text": "Description of feature 2"
+    },
+    {
+      "title": "Service Requests",
+      "text": "This is the text for card 3."
+    },
+    {
+      "title": "Garage Rent",
+      "text": "This is the text for card 4."
+    },
+    {
+      "title": "Festival",
+      "text": "This is the text for card 5."
+    },
+    {
+      "title": "Meeting Arrangement",
+      "text": "This is the text for card 6."
+    },
+    {
+      "title": "Collection & Expenses",
+      "text": "This is the text for card 7."
+    },
+    {
+      "title": "Ladies Club",
+      "text": "This is the text for card 8."
+    },
+    {
+      "title": "Security Gate",
+      "text": "This is the text for card 9."
+    }
+  ],
+  "SocietyInfo": [
+    {
+      "title1": "Notice Board",
+      "text1": "Details about Society Info 1"
+    },
+    {
+      "title1": "Emergency Contact",
+      "text1": "Details about Society Info 2"
+    },
+    {
+      "title1": "External Worker",
+      "text1": "Details about Society Info 3"
+    },
+    {
+      "title1": "Laundry",
+      "text1": "Details about Society Info 4"
+    },
+    {
+      "title1": "Holidays",
+      "text1": "Details about Society Info 5"
+    },
+    {
+      "title1": "Society Members Details",
+      "text1": "Details about Society Info 2"
+    },
+    {
+      "title1": "Society Bank Details",
+      "text1": "Details about Society Info 3"
+    },
+    {
+      "title1": "Society Rules",
+      "text1": "Details about Society Info 4"
+    },
+    {
+      "title1": "Internal Worker",
+      "text1": "Details about Society Info 5"
+    },
+    {
+      "title1": "Intercom Details",
+      "text1": "Details about Society Info 4"
+    },
+    {
+      "title1": "Society Information",
+      "text1": "Details about Society Info 5"
+    }
+  ]
 }
