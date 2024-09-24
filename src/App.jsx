@@ -6,12 +6,19 @@ import { Features } from "./components/features";
 import { About } from "./components/about";
 import { Services } from "./components/services";
 import { Gallery } from "./components/gallery";
+import { Testimonials } from "./components/testimonials";
 import { DownloadApp } from "./components/downloadApp";
 import { Contact } from "./components/contact";
 import { Team } from "./components/Team";
 import JsonData from "./data/data.json";
 import "./App.css";
 import AllFeature from "./components/allFeature";
+import { Hero } from "./components/hero";
+import FAQPage from "./components/faq";
+import { Awards } from "./components/awards";
+import { Industries } from "./components/industries";
+import { Cities } from "./components/cities";
+import Widget from "./components/widget";
 import Choose from "./components/choose";
 
 const App = () => {
