@@ -8,7 +8,7 @@ export const Features = (props) => {
       <div className="container">
         <div className="col-md-10 col-md-offset-1 section-title">
           <AnimatedComponent animationType="scaleUp">
-            <h2>Our Society Services</h2>
+            <h2>Our App Interface</h2>
           </AnimatedComponent>
         </div>
         <div className="row">

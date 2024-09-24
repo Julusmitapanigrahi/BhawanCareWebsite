@@ -8,7 +8,7 @@
 //       <div className="container">
 //         <div className="section-title">
 //         <AnimatedComponent animationType="scaleUp" >
-//           <h2>Additional Features</h2>
+//           <h2>What Sets Us Apart? </h2>
 //           </AnimatedComponent>
 //           <p>
 //             Enhancing Community Experience and Engagement

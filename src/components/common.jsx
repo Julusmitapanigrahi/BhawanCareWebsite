@@ -31,7 +31,7 @@ const Common = () => {
       <Navigation />
       <div className="section-title text-center section-title-top">
         <AnimatedComponent animationType="scaleUp">
-          <h2>Additional Features for {sectionTitle}</h2>
+          <h2>Exclusive Features for {sectionTitle}</h2>
         </AnimatedComponent>
         <p>Enhancing Community Experience and Engagement</p>
       </div>

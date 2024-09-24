@@ -14,6 +14,11 @@ const AllFeature = ({ data, societyInfo }) => {
     "#ccffcc", "#ffffcc", "#ffebcc", "#d6f5d6", "#ffd9cc"
   ];
 
+  useEffect(() => {
+    // Scroll to the top when the component mounts
+    window.scrollTo(0, 0);
+  })
+
   const handleMouseEnter = (index) => setHoveredIndex(index); // Set hovered card index
   const handleMouseLeave = () => setHoveredIndex(null); // Reset hovered card index
   const toggleTextDisplay1 = (index) => setShowTextIndex1(index === showTextIndex1 ? null : index); // Toggle text display for the first section

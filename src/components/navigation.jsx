@@ -44,6 +44,17 @@ export const Navigation = () => {
 
         <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul className="nav navbar-nav navbar-right">
+          <li>
+              <a href="#about" className="page-scroll" onClick={(e) => { e.preventDefault(); handleHashClick("#about"); }}>
+                About Us
+              </a>
+            </li>
+           
+            <li>
+              <a href="#services" className="page-scroll" onClick={(e) => { e.preventDefault(); handleHashClick("#services"); }}>
+                Interface
+              </a>
+            </li>
             <li>
               <a href="#features" className="page-scroll">
                 Features
@@ -59,21 +70,12 @@ export const Navigation = () => {
                 </ul>
               )}
             </li>
-            <li>
-              <a href="#about" className="page-scroll" onClick={(e) => { e.preventDefault(); handleHashClick("#about"); }}>
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#services" className="page-scroll" onClick={(e) => { e.preventDefault(); handleHashClick("#services"); }}>
-                Services
-              </a>
-            </li>
-            <li>
+           
+            {/* <li>
               <a href="#team" className="page-scroll" onClick={(e) => { e.preventDefault(); handleHashClick("#team"); }}>
                 Team
               </a>
-            </li>
+            </li> */}
             <li>
               <a href="#app" className="page-scroll" onClick={(e) => { e.preventDefault(); handleHashClick("#app"); }}>
                 Download App
@@ -81,7 +83,7 @@ export const Navigation = () => {
             </li>
             <li>
               <a href="#contact" className="page-scroll" onClick={(e) => { e.preventDefault(); handleHashClick("#contact"); }}>
-                Contact
+                Contact Us
               </a>
             </li>
           </ul>
