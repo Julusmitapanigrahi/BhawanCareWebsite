@@ -1,7 +1,7 @@
 {
   "Header": {
     "title": "Bhawan Care",
-    "paragraph": "Join us in creating a community where ideas flourish, friendships thrive, and together, we shape a better tomorrow."
+    "paragraph": "Join us in creating a community where ideas flourish, friendships thrive, and together, we shape a better tomorrow. Our platform offers a suite of features designed to help you automate day-to-day operations, from tracking maintenance requests to managing finances effortlessly. Embrace the future of community living with tools that foster collaboration, transparency, and growth, making your society a better place for everyone."
   },
   "About": {
     "paragraph": "Bhawan Care is a leading provider of community management solutions designed to simplify and enhance living in residential complexes. Our innovative application streamlines essential services such as security management, visitor tracking, facility booking, and communication between residents and management. Bhawan Care aims to create a seamless and secure living experience by integrating advanced technology with user-friendly features. Join Bhawan Care today and experience efficient and effective community management at your fingertips.",
@@ -108,34 +108,34 @@
   ],
   "Testimonials": [
     {
-      "img": "img/testimonials/01.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
+      "img": "img/testimonials/01.png",
+      "text": "\"Bhawan Care has revolutionized how we manage our society! The automated maintenance payment feature saves us so much time. It's user-friendly and efficient—exactly what we needed!\"",
+      "name": "Aarav Sharma"
     },
     {
-      "img": "img/testimonials/02.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
+      "img": "img/testimonials/02.png",
+      "text": "\"I’m amazed at how Bhawan Care simplifies communication with our management. No more waiting for responses! Everything is at our fingertips now. This app is a must-have for all residents!\"",
+      "name": "Priya Gupta"
     },
     {
       "img": "img/testimonials/03.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
+      "text": "\"Bhawan Care has made it so easy to book common facilities and keep track of our society's events. The app is designed with residents in mind, making it a joy to use. Highly recommended!\"",
+      "name": "Rajesh Mehta"
     },
     {
-      "img": "img/testimonials/04.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
+      "img": "img/testimonials/04.png",
+      "text": "\"I love how Bhawan Care allows me to handle all my society needs from the comfort of my home. The communication with management has never been smoother. This app is a game changer for residents!\"",
+      "name": "Sneha Patel"
     },
     {
-      "img": "img/testimonials/05.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
+      "img": "img/testimonials/05.png",
+      "text": "\"As a resident, I appreciate how Bhawan Care keeps us connected. The features for booking amenities and reporting issues are fantastic! It’s great to see such modern solutions for traditional challenges.\"",
+      "name": " Anil Verma"
     },
     {
-      "img": "img/testimonials/06.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
+      "img": "img/testimonials/06.png",
+      "text": "\"Bhawan Care has streamlined our society's operations significantly. The maintenance charge automation is efficient, and the app's overall design is intuitive. I can’t imagine going back to the old way of managing things!\"",
+      "name": "Kavya Nair"
     }
   ],
   "DownloadApp": [
@@ -176,8 +176,8 @@
   ],
 
   "Contact": {
-    "address": "3rd Floor, Bhawan Care, Radhamani Building, 123, Jayadev Vihar Rd, Block N5, IRC Village, Nayapalli, Bhubaneswar, Odisha 751013 ",
-    "phone": "078943 18795",
+    "address": "Block - N5/123, 3rd floor, Radhamani Building, Jayadev Vihar Rd, Bhubaneswar, Odisha 751013",
+    "phone": "+91 78943 18795",
     "email": "info@cpsorg24.com",
     "facebook": "fb.com",
     "twitter": "twitter.com",
