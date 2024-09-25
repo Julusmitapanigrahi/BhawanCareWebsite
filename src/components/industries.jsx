@@ -2,18 +2,13 @@ import React, { useState, useEffect } from 'react';
 import AnimatedComponent from './animation';
 
 export const Industries = () => {
-    const images = [
-      { id: 1, url: 'https://img.freepik.com/free-photo/climate-change-concept-collage_23-2149129761.jpg?size=626&ext=jpg&uid=R104029284&ga=GA1.1.993650411.1724500277&semt=ais_hybrid' },
-      { id: 2, url: 'https://img.freepik.com/premium-photo/from-barren-land-lush-greenery-climate-recovery_932138-34819.jpg?size=626&ext=jpg&uid=R104029284&ga=GA1.1.993650411.1724500277&semt=ais_hybrid' },
-      { id: 3, url: 'https://img.freepik.com/free-photo/view-wild-polar-bear_23-2150793137.jpg?size=626&ext=jpg&uid=R104029284&ga=GA1.1.993650411.1724500277&semt=ais_hybrid' },
-      { id: 4, url: 'https://images.unsplash.com/photo-1717511140281-52586e5e307d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjB8fHxlbnwwfHx8fHw%3D' },
-      { id: 5, url: 'https://images.unsplash.com/photo-1471506480208-91b3a4cc78be?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D' },
-      { id: 1, url: 'https://img.freepik.com/free-photo/climate-change-concept-collage_23-2149129761.jpg?size=626&ext=jpg&uid=R104029284&ga=GA1.1.993650411.1724500277&semt=ais_hybrid' },
-      { id: 2, url: 'https://img.freepik.com/premium-photo/from-barren-land-lush-greenery-climate-recovery_932138-34819.jpg?size=626&ext=jpg&uid=R104029284&ga=GA1.1.993650411.1724500277&semt=ais_hybrid' },
-      { id: 3, url: 'https://img.freepik.com/free-photo/view-wild-polar-bear_23-2150793137.jpg?size=626&ext=jpg&uid=R104029284&ga=GA1.1.993650411.1724500277&semt=ais_hybrid' },
-      { id: 4, url: 'https://images.unsplash.com/photo-1717511140281-52586e5e307d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjB8fHxlbnwwfHx8fHw%3D' },
-      { id: 5, url: 'https://images.unsplash.com/photo-1471506480208-91b3a4cc78be?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D' },
-    ];
+  const images = [
+    { id: 1, url: '/img/01.jpg', caption: 'Up For a Challenge?' },
+    { id: 2, url: '/img/02.jpg', caption: 'Unlock Personalized Learning' },
+    { id: 3, url: '/img/03.jpg', caption: 'Experience Hassle-Free Rides' }, // Example caption for the third image
+    { id: 4, url: '/img/04.jpg', caption: 'Looking for Dedicated Staff?' },
+    { id: 5, url: '/img/05.jpg', caption: 'Explore Tours & Packages.' },
+  ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -45,8 +40,8 @@ export const Industries = () => {
 
   return (
     <div className="sliding-section">
-      <AnimatedComponent animationType="scaleUp" >
-      <h2>Our Industry Affiliations</h2> 
+      <AnimatedComponent animationType="scaleUp">
+        <h2>Our Industry Affiliations</h2>
       </AnimatedComponent>
       <div className="enhanced-carousel-container">
         <div className="enhanced-carousel">
@@ -55,8 +50,10 @@ export const Industries = () => {
               key={image.id}
               className={`enhanced-carousel-item ${getClassForImage(index)}`}
             >
-              <img src={image.url} alt={image.name} className="carousel-image" />
-              <p className="image-caption">{image.name}</p>
+              <img src={image.url} alt={image.caption} className="carousel-image" />
+              <div className="image-caption-overlay">
+                <p className="image-caption">{image.caption}</p>
+              </div>
             </div>
           ))}
         </div>

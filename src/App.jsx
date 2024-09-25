@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import { Navigation } from "./components/navigation";
 import { Header } from "./components/header";
 import { Features } from "./components/features";
@@ -9,13 +10,19 @@ import { Gallery } from "./components/gallery";
 import { DownloadApp } from "./components/downloadApp";
 import { Contact } from "./components/contact";
 import { Team } from "./components/Team";
+import { Team } from "./components/Team";
 import JsonData from "./data/data.json";
 import "./App.css";
 import AllFeature from "./components/allFeature";
 import Choose from "./components/choose";
 import Common from "./components/common";
+import AllFeature from "./components/allFeature";
+import Choose from "./components/choose";
+import Common from "./components/common";
 import { Industries } from "./components/industries";
 import { Cities } from "./components/cities";
+import { Testimonials } from "./components/testimonials";
+import FAQPage from "./components/faq";
 import { Testimonials } from "./components/testimonials";
 import FAQPage from "./components/faq";
 import Widget from "./components/widget";
@@ -29,6 +36,10 @@ const App = () => {
   useEffect(() => {
     setLandingPageData(JsonData);
   }, []);
+
+  if (!landingPageData) {
+    return <div>Loading...</div>;
+  }
 
   if (!landingPageData) {
     return <div>Loading...</div>;

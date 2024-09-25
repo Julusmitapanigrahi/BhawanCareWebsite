@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Modal from "react-modal";
+import { FaTimes } from 'react-icons/fa'; // Import FontAwesome icon
 
 Modal.setAppElement('#root');
 
@@ -43,6 +44,22 @@ const ContactModal = ({ isOpen, onRequestClose, handleChange, handleSubmit }) =>
         },
       }}
     >
+      {/* Close Icon */}
+      <button
+        onClick={onRequestClose}
+        style={{
+          position: 'absolute',
+          top: '10px',
+          right: '10px',
+          background: 'transparent',
+          border: 'none',
+          fontSize: '20px',
+          cursor: 'pointer',
+        }}
+      >
+        <FaTimes style={{ color: '#FF6347' }} />
+      </button>
+
       <h2 style={{ textAlign: 'center', color: '#E8A905' }}>
         Request a Demo
       </h2>
@@ -181,9 +198,12 @@ const ContactModal = ({ isOpen, onRequestClose, handleChange, handleSubmit }) =>
             </div>
           </div>
         </div>
-        <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
-          <button
-            type="submit"
+
+        {/* Centered Submit Button */}
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+        <button
+            type="submit"  // Change onClick to type="submit" to trigger form submission
+            className="btn btn-custom btn-lg"
             style={{
               padding: '10px 20px',
               borderRadius: '10px',
@@ -194,22 +214,7 @@ const ContactModal = ({ isOpen, onRequestClose, handleChange, handleSubmit }) =>
               fontSize: '16px',
             }}
           >
-            Submit
-          </button>
-          <button
-            type="button"
-            onClick={onRequestClose}
-            style={{
-              padding: '10px 20px',
-              borderRadius: '10px',
-              backgroundColor: '#FF6347',
-              color: 'white',
-              border: 'none',
-              cursor: 'pointer',
-              fontSize: '16px',
-            }}
-          >
-            Close
+            Send
           </button>
         </div>
       </form>
