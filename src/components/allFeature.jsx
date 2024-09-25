@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Player } from '@lottiefiles/react-lottie-player';
 import { FaAngleDown } from 'react-icons/fa'; // Import down arrow icon
 import AnimatedComponent from "./animation";
+import { Contact } from "./contact";
 
 const AllFeature = ({ data, societyInfo }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null); // Track which card is hovered
@@ -17,7 +18,7 @@ const AllFeature = ({ data, societyInfo }) => {
   useEffect(() => {
     // Scroll to the top when the component mounts
     window.scrollTo(0, 0);
-  })
+  }, []); // Added empty dependency array to avoid continuous scrolling
 
   const handleMouseEnter = (index) => setHoveredIndex(index); // Set hovered card index
   const handleMouseLeave = () => setHoveredIndex(null); // Reset hovered card index
@@ -25,7 +26,7 @@ const AllFeature = ({ data, societyInfo }) => {
   const toggleTextDisplay2 = (index) => setShowTextIndex2(index === showTextIndex2 ? null : index); // Toggle text display for the second section
 
   return (
-    <div>
+    <div id="#allFeature">
       {/* Section for Society Management & Services */}
       <div className="section-title section-title-top">
         <AnimatedComponent animationType="scaleUp">
@@ -155,24 +156,24 @@ const AllFeature = ({ data, societyInfo }) => {
         <div className="featureColomn">
           {societyInfo.slice(5, 11).map((info, index) => (
             <div
-              key={index + 4}
+              key={index + 5} // Changed key to index + 5
               className="featureCard"
               style={{
-                backgroundColor: hoveredIndex === index + 4 ? colors[(index + 4) % colors.length] : "#f5f5f5",
+                backgroundColor: hoveredIndex === index + 5 ? colors[(index + 5) % colors.length] : "#f5f5f5",
               }}
-              onMouseEnter={() => handleMouseEnter(index + 4)}
+              onMouseEnter={() => handleMouseEnter(index + 5)}
               onMouseLeave={handleMouseLeave}
             >
               <div className="title-icon-container">
                 <h3>{info.title1}</h3>
-                {showTextIndex2 !== index + 4 && (
+                {showTextIndex2 !== index + 5 && (
                   <FaAngleDown
-                    onClick={() => toggleTextDisplay2(index + 4)}
+                    onClick={() => toggleTextDisplay2(index + 5)}
                     style={{ fontSize: "24px", cursor: "pointer", marginLeft: '10px' }}
                   />
                 )}
               </div>
-              {showTextIndex2 === index + 4 && (
+              {showTextIndex2 === index + 5 && (
                 <div>
                   <p>{info.text1}</p>
                 </div>
@@ -180,7 +181,9 @@ const AllFeature = ({ data, societyInfo }) => {
             </div>
           ))}
         </div>
+        
       </div>
+      <Contact/>
     </div>
   );
 };

@@ -1,20 +1,22 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { FaAngleDown, FaAngleRight } from 'react-icons/fa';
 
-export const Navigation = () => {
+export const Navigation = ({ setActiveSection, features }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const navigate = useNavigate();
+  const [activeFeature, setActiveFeature] = useState(null);
 
-  const toggleDropdown = (event) => {
-    event.preventDefault();
-    setIsDropdownOpen(!isDropdownOpen);
+  const handleDropdownEnter = () => {
+    setIsDropdownOpen(true);
   };
 
-  const handleHashClick = (hash) => {
-    navigate("/"); // Navigate to the base route first
-    setTimeout(() => {
-      window.location.hash = hash; // After navigating, set the hash
-    }, 0); // Timeout to ensure routing works
+  const handleDropdownLeave = () => {
+    setIsDropdownOpen(false);
+    setActiveFeature(null);
+  };
+
+  const toggleSubDropdown = (feature) => {
+    setActiveFeature(activeFeature === feature ? null : feature);
   };
 
   return (
@@ -32,7 +34,7 @@ export const Navigation = () => {
             <span className="icon-bar"></span>
             <span className="icon-bar"></span>
           </button>
-          <Link className="navbar-brand page-scroll" to="/#page-top">
+          <Link className="navbar-brand page-scroll" to="/#page-top" onClick={() => setActiveSection('home')}>
             <img
               src="/img/portfolio/logo.png"
               alt="Logo"
@@ -44,47 +46,72 @@ export const Navigation = () => {
 
         <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul className="nav navbar-nav navbar-right">
-          <li>
-              <a href="#about" className="page-scroll" onClick={(e) => { e.preventDefault(); handleHashClick("#about"); }}>
+            <li>
+              <Link to="/#about" className="page-scroll" onClick={() => setActiveSection('about')}>
                 About Us
-              </a>
+              </Link>
             </li>
-           
             <li>
-              <a href="#services" className="page-scroll" onClick={(e) => { e.preventDefault(); handleHashClick("#services"); }}>
+              <Link to="/#services" className="page-scroll" onClick={() => setActiveSection('services')}>
                 Interface
-              </a>
+              </Link>
             </li>
-            <li>
+            <li
+              className="dropdown-feature"
+              onMouseEnter={handleDropdownEnter}
+              onMouseLeave={handleDropdownLeave}
+            >
               <a href="#features" className="page-scroll">
-                Features
-                <span onClick={toggleDropdown} style={{ marginLeft: '5px', cursor: 'pointer' }}>
-                  ▼
+                <span style={{ display: 'flex', alignItems: 'center' }}>
+                  Features
+                  <FaAngleDown
+                    className="custom-arrow"
+                    style={{ cursor: 'pointer', fontSize: "20px", marginLeft: '5px', color: "#E8A905" }}
+                  />
                 </span>
               </a>
               {isDropdownOpen && (
                 <ul className="dropdown-menu">
-                  <li><a href="#feature1" className="page-scroll">Feature 1</a></li>
-                  <li><a href="#feature2" className="page-scroll">Feature 2</a></li>
-                  <li><a href="#feature3" className="page-scroll">Feature 3</a></li>
+                  {features.map((feature, index) => (
+                    <li
+                      key={index}
+                      onMouseEnter={() => toggleSubDropdown(feature.name)}
+                      onMouseLeave={() => toggleSubDropdown(null)} // Close sub-dropdown when leaving
+                    >
+                      <a href="#features" className="page-scroll">
+                        <span style={{ display: 'flex', alignItems: 'center' }}>
+                          {feature.name}
+                          <FaAngleRight
+                            className="custom-arrow"
+                            style={{ cursor: 'pointer', fontSize: "18px", marginLeft: '5px', color: "#E8A905" }}
+                          />
+                        </span>
+                      </a>
+                      {activeFeature === feature.name && (
+                        <ul className="sub-dropdown">
+                          {feature.subFeatures.map((subFeature, i) => (
+                            <li key={i}>
+                              <Link to={`/#${subFeature.replace(/\s+/g, '-').toLowerCase()}`} className="page-scroll" onClick={() => setActiveSection(subFeature)}>
+                                {subFeature}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  ))}
                 </ul>
               )}
             </li>
-           
-            {/* <li>
-              <a href="#team" className="page-scroll" onClick={(e) => { e.preventDefault(); handleHashClick("#team"); }}>
-                Team
-              </a>
-            </li> */}
             <li>
-              <a href="#app" className="page-scroll" onClick={(e) => { e.preventDefault(); handleHashClick("#app"); }}>
+              <Link to="/#app" className="page-scroll" onClick={() => setActiveSection('app')}>
                 Download App
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#contact" className="page-scroll" onClick={(e) => { e.preventDefault(); handleHashClick("#contact"); }}>
+              <Link to="/#contact" className="page-scroll" onClick={() => setActiveSection('contact')}>
                 Contact Us
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -92,3 +119,4 @@ export const Navigation = () => {
     </nav>
   );
 };
+ 

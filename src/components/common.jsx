@@ -4,6 +4,9 @@ import data from "../data/data.json"; // Ensure the path is correct
 import AnimatedComponent from "./animation"; // Animation component
 import { Navigation } from "./navigation"; // Navigation component
 import { Contact } from "./contact"; // Contact component
+import { Player } from '@lottiefiles/react-lottie-player';
+
+
 
 const Common = () => {
   const { section } = useParams(); // Extract section from URL
@@ -37,10 +40,10 @@ const Common = () => {
       </div>
 
       <div>
-        <img 
-          src="../img/adminImage.svg" 
-          alt={`${section} section image`} 
-          className="responsive-svg" 
+        <img
+          src="../img/adminImage.svg"
+          alt={`${section} section image`}
+          className="responsive-svg"
         />
         <div className="animatedcard">
           {cardData.length > 0 ? (
@@ -52,10 +55,16 @@ const Common = () => {
                     <p>{d.paragraph}</p>
                   </div>
                   <div className="card-image">
-                    <img
+                    {/* <img
                       src={d.largeImage}
                       alt={`Card visual for ${d.title}`}
                       className="right-image"
+                    /> */}
+                    <Player
+                      autoplay
+                      loop
+                      src={d.largeImage}
+                      style={{ height: '150px', width: '150px' }}
                     />
                   </div>
                 </div>

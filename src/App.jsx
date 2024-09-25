@@ -20,9 +20,11 @@ import { Testimonials } from "./components/testimonials";
 import FAQPage from "./components/faq";
 import Widget from "./components/widget";
 import { Awards } from "./components/awards";
+import { AboutContact } from "./components/aboutContact";
 
 const App = () => {
   const [landingPageData, setLandingPageData] = useState(null);
+  const [activeSection, setActiveSection] = useState("home"); // New state to track active section
 
   useEffect(() => {
     setLandingPageData(JsonData);
@@ -35,33 +37,70 @@ const App = () => {
   return (
     <Router>
       <div>
-        <Navigation />
+        {/* Pass setActiveSection to Navigation */}
+        <Navigation setActiveSection={setActiveSection} features={landingPageData.Navigation} />
+
+        {/* Conditionally render sections based on the activeSection */}
         <Routes>
           <Route
             path="/"
             element={
               <>
-                <Header data={landingPageData.Header} />
-                <About data={landingPageData.About} />
-                <Choose data={landingPageData.Services} />
+                {activeSection === "home" && (
+                  <>
+                    <Header data={landingPageData.Header} />
+                    <About data={landingPageData.About} />
+                    <Choose data={landingPageData.Services} />
+                    <Features data={landingPageData.Features} />
+                    <Awards />
+                    <Gallery data={landingPageData.Gallery} />
+                    <Services data={landingPageData.Services} />
+                    <Team data={landingPageData.Team} />
+                    <DownloadApp data={landingPageData.DownloadApp} />
+                    <Industries />
+                    <Cities />
+                    <Testimonials data={landingPageData.Testimonials} />
+                    <FAQPage />
+                    <Contact data={landingPageData.Contact} />
+                    <Widget data={landingPageData.Widget} />
+                  </>
+                )}
 
-                <Features data={landingPageData.Features} />
-                <Awards />
+                {activeSection === "about" && (
+                  <>
+                    <About data={landingPageData.About} />
+                    <Contact data={landingPageData.Contact} />
+                  </>
+                )}
 
-                <Gallery data={landingPageData.Gallery} />
-                <Services data={landingPageData.Services} />
+                {activeSection === "services" && (
+                  <>
+                    <Services data={landingPageData.Services} />
+                    <Contact data={landingPageData.Contact} />
+                  </>
+                )}
 
-                <Team data={landingPageData.Team} />
-                <DownloadApp data={landingPageData.DownloadApp} />
-                <Industries />
-                <Cities />
-                <Testimonials data={landingPageData.Testimonials} />
-                <FAQPage />
-                <Contact data={landingPageData.Contact} />
-                <Widget data={landingPageData.Widget}/>
+                {activeSection === "features" && (
+                  <Features data={landingPageData.Features} />
+                )}
+
+                {activeSection === "app" && (
+                  <>
+                    <DownloadApp data={landingPageData.DownloadApp} />
+                    <Contact data={landingPageData.Contact} />
+                  </>
+                )}
+
+                {activeSection === "contact" && (
+                  <>
+                    <AboutContact data={landingPageData.AboutContact} />
+                    <Contact data={landingPageData.Contact} />
+                  </>
+                )}
               </>
             }
           />
+
           <Route
             path="/features"
             element={
@@ -71,7 +110,11 @@ const App = () => {
               />
             }
           />
-          <Route path="/common/:section" element={<Common />} /> {/* Moved inside Routes */}
+          <Route path="/common/:section" element={<Common />} />
+          <Route path="/allFeature" element={<AllFeature
+            data={landingPageData.AllFeature}
+            societyInfo={landingPageData.SocietyInfo} />} />
+
         </Routes>
       </div>
     </Router>
