@@ -901,6 +901,7 @@ a:focus,
 .cities-section {
   margin-top: 20px;
   padding: 100px 0px;
+  background: linear-gradient(to right, #FEFAEE 0%, #FEFAEE 50%);
 }
 
 /* Heading styling */
@@ -1141,7 +1142,7 @@ a:focus,
 /* Testimonials Section */
 #testimonials {
   padding: 100px 0;
-  background: linear-gradient(to right, #FEFAEE 0%, #FEFAEE 50%);
+  /* background: linear-gradient(to right, #FEFAEE 0%, #FEFAEE 50%); */
 }
 #testimonials i {
   color: #e6e6e6;
@@ -1202,8 +1203,8 @@ a:focus,
 /* DownloadApp Section */
 #app {
   padding: 100px 0;
-  /* background: linear-gradient(to right, #FEFAEE 0%, #FEFAEE 50%); */
-  background-color: #fff;
+  background: linear-gradient(to right, #FEFAEE 0%, #FEFAEE 50%);
+  /* background-color: #fff; */
   box-sizing: border-box;
   width: 100%;
 }
@@ -1273,7 +1274,7 @@ a:focus,
   justify-content: center;
   align-items: center;
   padding: 10px;
-  /* background: linear-gradient(to right, #FEFAEE 0%, #FEFAEE 50%); */
+  background: linear-gradient(to right, #FEFAEE 0%, #FEFAEE 50%);
   min-height: 100vh; 
 }
 
@@ -1333,8 +1334,8 @@ a:focus,
 /* Contact Section */
 #contact {
   padding: 100px 0 60px;
-  /* background-color: #fff; */
-  background: linear-gradient(to right, #FEFAEE 0%, #FEFAEE 50%);
+  background-color: #fff;
+  /* background: linear-gradient(to right, #FEFAEE 0%, #FEFAEE 50%); */
   color: rgba(40, 40, 40, 0.75);
 }
 
