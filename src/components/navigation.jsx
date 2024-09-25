@@ -118,5 +118,4 @@ export const Navigation = ({ setActiveSection, features }) => {
       </div>
     </nav>
   );
-};
- 
+}
