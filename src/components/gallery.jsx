@@ -1,60 +1,18 @@
-// import AnimatedComponent from "./animation";
-// import { Image } from "./image";
-// import React from "react";
-
-// export const Gallery = (props) => {
-//   return (
-//     <div id="portfolio" className="text-center">
-//       <div className="container">
-//         <div className="section-title">
-//         <AnimatedComponent animationType="scaleUp" >
-//           <h2>What Sets Us Apart? </h2>
-//           </AnimatedComponent>
-//           <p>
-//             Enhancing Community Experience and Engagement
-//           </p>
-//         </div>
-//         <div className="row">
-//           <div className="portfolio-items">
-//             {props.data
-//               ? props.data.map((d, i) => (
-//                 <div
-//                   key={`${d.title}-${i}`}
-//                   className="col-sm-6 col-md-4 col-lg-4"
-//                 >
-//                   <AnimatedComponent animationType="fadeIn">
-//                     <Image
-//                       title={d.title}
-//                       paragraph={d.paragraph}
-//                       // largeImage={d.largeImage}
-//                       smallImage={d.smallImage}
-//                     />
-//                   </AnimatedComponent>
-//                 </div>
-//               ))
-//               : "Loading..."}
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
 
 import React from 'react';
 import AnimatedComponent from './animation';
 
 export const Gallery = () => {
   const companies = [
-    { name: 'ISO Certification', logo: '/img/certificates/ISO.png' },
-    { name: 'GDPR & ISDO Guidelines', logo: '/img/certificates/GDPR.png' },
-    { name: 'PCI-DSS', logo: '/img/certificates/PCI.png' },
-    { name: 'SOC 2', logo: '/img/certificates/soc-2.png' },
-    { name: 'CMMI', logo: '/img/certificates/cmmi.png' },
+    { logo: '/img/certificates/ISO.png' },
+    { logo: '/img/certificates/GDPR.png' },
+    { logo: '/img/certificates/PCI.png' },
+    { logo: '/img/certificates/soc-2.png' },
+    { logo: '/img/certificates/cmmi.png' },
   ];
 
   return (
-    <div className="sliding-section">
+    <div className="gallery-section">
       <AnimatedComponent animationType="scaleUp" >
         <h2>Recognized Achievements</h2>
       </AnimatedComponent>

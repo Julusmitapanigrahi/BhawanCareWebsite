@@ -33,23 +33,42 @@ export const Navigation = () => {
             <span className="icon-bar"></span>
           </button>
           <Link className="navbar-brand page-scroll" to="/#page-top">
-            <img
-              src="/img/portfolio/logo.png"
-              alt="Logo"
-              style={{ height: '70px' }}
-            />
+            <div
+              style={{ position: 'relative' }}
+              onContextMenu={(e) => {
+                e.preventDefault();
+                alert('Due to privacy reasons, you are not allowed to download this logo.');
+              }}
+            >
+              <img
+                src="/img/portfolio/logo.png"
+                alt="Logo"
+                style={{ height: '120px', width: 'auto', paddingTop: '10px' }}
+                draggable="false"
+              />
+              <div
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  backgroundColor: 'transparent',
+                }}
+              ></div>
+            </div>
             Bhawan Care
           </Link>
         </div>
 
         <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul className="nav navbar-nav navbar-right">
-          <li>
+            <li>
               <a href="#about" className="page-scroll" onClick={(e) => { e.preventDefault(); handleHashClick("#about"); }}>
                 About Us
               </a>
             </li>
-           
+
             <li>
               <a href="#services" className="page-scroll" onClick={(e) => { e.preventDefault(); handleHashClick("#services"); }}>
                 Interface
@@ -70,7 +89,7 @@ export const Navigation = () => {
                 </ul>
               )}
             </li>
-           
+
             {/* <li>
               <a href="#team" className="page-scroll" onClick={(e) => { e.preventDefault(); handleHashClick("#team"); }}>
                 Team

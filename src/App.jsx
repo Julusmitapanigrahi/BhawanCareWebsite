@@ -20,6 +20,11 @@ import { Testimonials } from "./components/testimonials";
 import FAQPage from "./components/faq";
 import Widget from "./components/widget";
 import { Awards } from "./components/awards";
+import { Additional } from "./components/additionalFeatures";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { Scroller } from "./components/scroller";
+
 
 const App = () => {
   const [landingPageData, setLandingPageData] = useState(null);
@@ -47,10 +52,11 @@ const App = () => {
 
                 <Features data={landingPageData.Features} />
                 <Awards />
-
+                <Additional data={landingPageData.Additional}/>
+                {/* <Scroller  data={landingPageData.Scroller}/> */}
                 <Gallery data={landingPageData.Gallery} />
                 <Services data={landingPageData.Services} />
-
+            
                 <Team data={landingPageData.Team} />
                 <DownloadApp data={landingPageData.DownloadApp} />
                 <Industries />
