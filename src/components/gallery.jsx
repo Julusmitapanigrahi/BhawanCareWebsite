@@ -46,15 +46,15 @@ import AnimatedComponent from './animation';
 
 export const Gallery = () => {
   const companies = [
-    { name: 'ISO Certification', logo: '/img/certificates/ISO.png' },
-    { name: 'GDPR & ISDO Guidelines', logo: '/img/certificates/GDPR.png' },
-    { name: 'PCI-DSS', logo: '/img/certificates/PCI.png' },
-    { name: 'SOC 2', logo: '/img/certificates/soc-2.png' },
-    { name: 'CMMI', logo: '/img/certificates/cmmi.png' },
+    { logo: '/img/certificates/ISO.png' },
+    { logo: '/img/certificates/GDPR.png' },
+    { logo: '/img/certificates/PCI.png' },
+    { logo: '/img/certificates/soc-2.png' },
+    { logo: '/img/certificates/cmmi.png' },
   ];
 
   return (
-    <div className="sliding-section">
+    <div className="gallery-section">
       <AnimatedComponent animationType="scaleUp" >
         <h2>Recognized Achievements</h2>
       </AnimatedComponent>
