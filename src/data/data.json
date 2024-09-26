@@ -34,7 +34,7 @@
     ]
   },
 
-  "Gallery": [
+  "Additional": [
     {
       "title": "Notice Board",
       "paragraph": "Stay updated with the latest announcements, events, and notices from the society management. Our digital notice board ensures that all important information is easily accessible to all residents.",
@@ -76,30 +76,25 @@
     {
       "icon": "fa fa-shield",
       "name": "Voting",
-      "name": "Voting",
       "text": "Our app offers robust security management, with real-time monitoring of visitor entries and exits. Residents receive instant notifications for enhanced safety and transparency."
     },
     {
       "icon": "fa fa-car",
-      "name": "Festival",
       "name": "Festival",
       "text": "Easily find and rent available garages within the society using our app. Owners can list garages, and tenants can book them with a few clicks, simplifying parking space management and maximizing garage utilization."
     },
     {
       "icon": "fa fa-cog",
       "name": "Notice Board",
-      "name": "Notice Board",
       "text": "Need plumbing, electrical, or other household services? Our app connects you with verified professionals in the society, allowing you to request services, track progress, and communicate directly for timely resolutions."
     },
     {
       "icon": "fa fa-wrench",
       "name": "Emergency Contact",
-      "name": "Emergency Contact",
       "text": "Manage and pay maintenance charges effortlessly through our app. Get reminders for upcoming dues, view detailed breakdowns, and make secure online payments, ensuring transparency and simplicity."
     },
     {
       "icon": "fa fa-calendar",
-      "name": "Complaint Box",
       "name": "Complaint Box",
       "text": "Plan and join society festivals easily with our booking feature. Stay updated on events, reserve your spot, and contribute to celebrations, fostering community spirit and smooth event coordination."
     },
@@ -117,17 +112,8 @@
       "icon": "fa fa-check",
       "name": "Arrang Meeting",
       "text": "Hold society elections efficiently with our management feature. Nominate candidates, vote, and view results in real-time through the app, ensuring a fair process and boosting community engagement."
-    },
-    {
-      "icon": "fa fa-calendar",
-      "name": "Suggestin Box",
-      "text": "Plan and join society festivals easily with our booking feature. Stay updated on events, reserve your spot, and contribute to celebrations, fostering community spirit and smooth event coordination."
-    },
-    {
-      "icon": "fa fa-check",
-      "name": "Arrang Meeting",
-      "text": "Hold society elections efficiently with our management feature. Nominate candidates, vote, and view results in real-time through the app, ensuring a fair process and boosting community engagement."
     }
+    
   ],
   "Testimonials": [
     {
