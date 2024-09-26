@@ -21,6 +21,7 @@ import FAQPage from "./components/faq";
 import Widget from "./components/widget";
 import { Awards } from "./components/awards";
 import { AboutContact } from "./components/aboutContact";
+import { Additional } from "./components/additionalFeatures";
 
 const App = () => {
   const [landingPageData, setLandingPageData] = useState(null);
@@ -29,6 +30,10 @@ const App = () => {
   useEffect(() => {
     setLandingPageData(JsonData);
   }, []);
+
+  if (!landingPageData) {
+    return <div>Loading...</div>;
+  }
 
   if (!landingPageData) {
     return <div>Loading...</div>;
@@ -53,6 +58,7 @@ const App = () => {
                     <Choose data={landingPageData.Services} />
                     <Features data={landingPageData.Features} />
                     <Awards />
+                    <Additional data={landingPageData.Additional} />
                     <Gallery data={landingPageData.Gallery} />
                     <Services data={landingPageData.Services} />
                     <Team data={landingPageData.Team} />

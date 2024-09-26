@@ -8,7 +8,7 @@ export const Services = (props) => {
       <div className="container">
         <div className="col-md-8 col-md-offset-2 section-title">
           <AnimatedComponent animationType="scaleUp">
-            <h2>Recognized Achievements</h2>
+            <h2>Features We Provide</h2>
           </AnimatedComponent>
           <p>Essential Features for Seamless Society Living</p>
         </div>
