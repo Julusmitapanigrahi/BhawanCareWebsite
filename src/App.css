@@ -5,6 +5,7 @@
     padding: 20px;
     width: 111%;
   }
+
   #about,
   #services,
   #team,
@@ -19,5 +20,29 @@
   #portfolio {
     width: 110%;
   }
+}
 
+
+@media screen and (max-width: 480px) {
+  #app,
+  #industry,
+  #features {
+    padding: 20px;
+    width: 111%;
+  }
+  
+  #about,
+  #services,
+  #team,
+  #testimonials,
+  #city,
+  #FAQ,
+  #contact,
+  #footer {
+    width: 111%;
+  }
+
+  #portfolio {
+    width: 110%;
+  }
 }

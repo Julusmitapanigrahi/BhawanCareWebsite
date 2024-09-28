@@ -60,7 +60,7 @@ export const Navigation = ({ setActiveSection, features }) => {
                 style={{ height: '120px', width: 'auto', paddingTop: '10px' }}
                 draggable="false"
               />
-              <div
+              <div className="logo"
                 style={{
                   position: 'absolute',
                   top: 0,
