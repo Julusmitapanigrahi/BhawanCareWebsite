@@ -73,7 +73,7 @@ const Common = () => {
 
       <div>
         <img
-          src="../img/imageAdmin.jpg"
+          src="../img/imageAdmin.png"
           alt={`${section} section image`}
           className="responsive-svg"
         />

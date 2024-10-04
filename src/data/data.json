@@ -396,7 +396,7 @@
     },
     {
       "name": "Information",
-      "subFeatures": ["Notice Board", "Emergency Contacts", "External workers", "Laundry", "Corpus Fund", "Local Programs", "Society Information", "Society Rule", "Internal Worker", "Intercom Details", "Holidays", "Society Members History", "Society Bank Details", "Feature 2 Sub 14", "Feature 2 Sub 15"]
+      "subFeatures": ["Notice Board", "Emergency Contacts", "External workers", "Laundry", "Corpus Fund", "Local Programs", "Society Information", "Society Rule", "Internal Worker", "Intercom Details", "Holidays", "Society Members History", "Society Bank Details"]
     }
   ]
 }
