@@ -11,7 +11,6 @@ export const Cities = () => {
     ];
 
     return (
-        < div id='city'>
         <section className="cities-section">
             <AnimatedComponent animationType="scaleUp" >
                 <h2 className="section-heading">We’re Here For You</h2>
@@ -22,7 +21,6 @@ export const Cities = () => {
                 ))}
             </ul>
         </section>
-        </div>
     );
 }
 

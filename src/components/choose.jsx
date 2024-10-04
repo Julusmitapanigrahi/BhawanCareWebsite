@@ -4,10 +4,10 @@ import AnimatedComponent from "./animation";
 const Choose = () => {
     return (
 
-        <div id='choose' className="chooseContainer">
+        <div className="chooseContainer">
             <div className="col-md-10 col-md-offset-1 section-title">
                 <AnimatedComponent animationType="scaleUp" >
-                    <h2 className='service'>Why Choose Us ?</h2>
+                    <h2 className='service centerAlign'>Why Choose Us ?</h2>
                 </AnimatedComponent>
             </div>
 
