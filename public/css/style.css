@@ -213,6 +213,8 @@ hr {
   background-color: transparent; 
   border: 2px solid #E8A905;
   color: #E8A905; 
+  margin-bottom: 10px;
+  margin-left: 10px;
   padding: 10px 34px; 
   font-size: 16px; 
   border-radius: 50px; 
@@ -225,11 +227,11 @@ hr {
 }
 
 .button-container {
-  margin-top: 20px; 
+  margin-top: 20px;
 }
 
 .button-container a {
-  margin-right: 10px; /* Adds space between the two buttons */
+  margin-right: 10px; 
 }
 .btn-custom:hover,
 .btn-custom:focus,
@@ -299,6 +301,11 @@ a:focus,
   text-transform: uppercase;
 }
 
+#heading {
+  font-size: 24px;
+}
+
+
 .intro p {
   color: #94664b;
   font-size: 20px;
@@ -327,8 +334,8 @@ a:focus,
 }
 
 .image-item.large img {
-    width: 360px;
-    height: 360px; /* Keep the aspect ratio */
+  width: 360px;
+  height: 360px; /* Keep the aspect ratio */
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -353,7 +360,7 @@ a:focus,
 
 .image-item.small:nth-child(2) {
   top: 50px;
-  left: -90px; 
+  left: -100px; 
 }
 
 .image-item.small:nth-child(3) {
@@ -926,7 +933,7 @@ a:focus,
 /*Slider Section*/
 .gallery-section {
   text-align: center;
-  padding: 100px 0; 
+  padding: 100px 10px; 
   position: relative; 
 }
 
@@ -1002,6 +1009,8 @@ a:focus,
     margin: 5px;
   }
 }
+
+
 
 
 /*Industries Section*/
@@ -1303,7 +1312,7 @@ a:focus,
   justify-content: center;
   gap: 20px;
   max-width: 900px; /* Slightly wider max-width to fit 4 per row */
-  margin: 0 30px;
+  margin: 0 auto;
 }
 
 /* Styling for each city item */

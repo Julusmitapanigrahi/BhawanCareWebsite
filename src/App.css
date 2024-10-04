@@ -1,6 +1,8 @@
+
 @media screen and (max-width: 400px) {
   #app,
   #industry,
+  #choose,
   #features {
     padding: 20px;
     width: 111%;
@@ -14,7 +16,8 @@
   #FAQ,
   #contact,
   #footer {
-    width: 111%;
+    width: 114%;
+    padding: 20px;
   }
 
   #portfolio {
@@ -23,9 +26,10 @@
 }
 
 
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
   #app,
   #industry,
+  #choose,
   #features {
     padding: 20px;
     width: 111%;
@@ -45,11 +49,12 @@
   #portfolio {
     width: 110%;
   }
-}
+} */
 
-@media screen and (max-width: 780px) {
+/* @media screen and (max-width: 780px) {
   #app,
   #industry,
+  #choose,
   #features {
     padding: 20px;
     width: 111%;
@@ -69,6 +74,10 @@
   #portfolio {
     width: 110%;
   }
-}
 
-
+  
+  #gallery {
+    margin: 20px;
+    width: 111%;
+  }
+} */
