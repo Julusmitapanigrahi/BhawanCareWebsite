@@ -7,6 +7,10 @@ export const Header = (props) => {
   const [smallImagesInView, setSmallImagesInView] = useState([false, false, false]);
   const [isModalOpen, setIsModalOpen] = useState(false); // Manage modal open state
 
+  const handleWhatsApp = () => {
+    window.open('https://wa.me/917894318795'); // Your WhatsApp number
+  };
+
   const { ref: firstImageRef, inView: firstImageInView } = useInView({
     triggerOnce: false,
     threshold: 0.5,
@@ -36,12 +40,14 @@ export const Header = (props) => {
           </AnimatedComponent>
           <p>{props.data ? props.data.paragraph : "Loading"}</p>
 
+          <h1 id="heading">{props.data ? props.data.heading : "Loading"}</h1>
+
           <div className="button-container">
             <button onClick={openModal} className="btn btn-custom btn-lg">
-              Get A Demo
+              Book A Demo
             </button>
-            <a href="#contact" className="btn btn-send btn-lg page-scroll">
-              Contact Us
+            <a href="#" onClick={handleWhatsApp} className="btn btn-send btn-lg page-scroll">
+              Let's Connect
             </a>
           </div>
         </div>
@@ -52,7 +58,7 @@ export const Header = (props) => {
             <div className="image-large-wrapper">
               <div className="image-item large">
                 <img
-                  src="https://plus.unsplash.com/premium_photo-1672423154405-5fd922c11af2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YnVpbGRpbmd8ZW58MHx8MHx8fDA%3D"
+                  src="/img/header/family.jpg"
                   alt="Main Product"
                   className="main-image"
                 />
@@ -72,7 +78,7 @@ export const Header = (props) => {
               }}
             >
               <img
-                src="https://plus.unsplash.com/premium_photo-1661962911608-ea55ac7785da?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnVpbGRpbmd8ZW58MHx8MHx8fDA%3D"
+                src="/img/header/small1.jpg"
                 alt="Product 2"
                 className="small-image"
               />
@@ -88,7 +94,7 @@ export const Header = (props) => {
               }}
             >
               <img
-                src="https://plus.unsplash.com/premium_photo-1661340695541-ee1ca7efedd0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGJ1aWxkaW5nfGVufDB8fDB8fHww"
+                src="/img/header/small2.jpg"
                 alt="Product 3"
                 className="small-image"
               />
@@ -104,7 +110,7 @@ export const Header = (props) => {
               }}
             >
               <img
-                src="https://plus.unsplash.com/premium_photo-1661340695541-ee1ca7efedd0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGJ1aWxkaW5nfGVufDB8fDB8fHww"
+                src="/img/header/small3.jpg"
                 alt="Product 4"
                 className="small-image"
               />

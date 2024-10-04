@@ -1,4 +1,8 @@
+
 @media screen and (max-width: 400px) {
+  #app,
+  #industry,
+  #choose,
   #app,
   #industry,
   #choose,
@@ -7,10 +11,37 @@
     width: 111%;
   }
 
+
   #about,
   #services,
   #team,
+  #team,
   #testimonials,
+  #city,
+  #FAQ,
+  #contact,
+  #footer {
+    width: 114%;
+    padding: 20px;
+  }
+
+  #portfolio {
+    width: 110%;
+  }
+}
+
+
+/* @media screen and (max-width: 480px) {
+  #app,
+  #industry,
+  #choose,
+  #features {
+    padding: 20px;
+    width: 111%;
+  }
+  
+  #about,
+  #services,
   #city,
   #FAQ,
   #contact,
@@ -25,6 +56,31 @@
 
 
 @media screen and (max-width: 480px) {
+  #app,
+  #industry,
+  #choose,
+  #features {
+    padding: 20px;
+    width: 111%;
+  }
+  
+  #about,
+  #services,
+  #team,
+  #testimonials,
+  #city,
+  #FAQ,
+  #contact,
+  #footer {
+    width: 111%;
+  }
+
+  #portfolio {
+    width: 110%;
+  }
+} */
+
+/* @media screen and (max-width: 780px) {
   #app,
   #industry,
   #choose,
