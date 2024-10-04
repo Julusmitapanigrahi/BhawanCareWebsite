@@ -1,19 +1,25 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { FaAngleDown, FaAngleRight } from 'react-icons/fa';
+import {
+  FaAngleDown,
+  FaTools,
+  FaVoteYea,
+  FaClipboard,
+  FaCar,
+  FaMusic,
+  FaUsers,
+} from 'react-icons/fa'; // Importing the needed icons
 
-export const Navigation = ({ setActiveSection, features }) => {
+export const Navigation = ({ features }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [activeFeature, setActiveFeature] = useState(null);
   const dropdownRef = useRef(null);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
-    setActiveFeature(null);
   };
 
-  const toggleSubDropdown = (feature) => {
-    setActiveFeature(activeFeature === feature ? null : feature);
+  const handleCall = () => {
+    window.open('tel:+1800 2575 2244'); // Your phone number
   };
 
   // Handle click outside the dropdown to close it
@@ -21,7 +27,6 @@ export const Navigation = ({ setActiveSection, features }) => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsDropdownOpen(false);
-        setActiveFeature(null);
       }
     };
 
@@ -79,19 +84,13 @@ export const Navigation = ({ setActiveSection, features }) => {
         <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul className="nav navbar-nav navbar-right">
             <li>
-              <Link to="/#about" className="page-scroll" onClick={() => setActiveSection('about')}>
+              <Link to="/#about" className="page-scroll">
                 About Us
-              </Link>
-            </li>
-
-            <li>
-              <Link to="/#services" className="page-scroll" onClick={() => setActiveSection('services')}>
-                Interface
               </Link>
             </li>
             <li className="dropdown-feature" ref={dropdownRef}>
               <a className="page-scroll" onClick={toggleDropdown} style={{ cursor: 'pointer' }}>
-                <span href="#" style={{ display: 'flex', alignItems: 'center' }}>
+                <span style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
                   Features
                   <FaAngleDown
                     className="custom-arrow"
@@ -100,46 +99,100 @@ export const Navigation = ({ setActiveSection, features }) => {
                 </span>
               </a>
               {isDropdownOpen && (
-                <ul className="dropdown-menu">
-                  {features.map((feature, index) => (
-                    <li key={index}>
-                      <span style={{ display: 'flex', alignItems: 'center' }}>
-                        <a href="#" className="page-scroll dropdown-item" onClick={() => toggleSubDropdown(feature.name)} >
-                          {feature.name}
-                        </a>
-                        <FaAngleRight
-                          className="custom-arrow"
-                          style={{ cursor: 'pointer', fontSize: "18px", marginLeft: '5px', color: "#E8A905" }}
-                        />
-                      </span>
-                      {activeFeature === feature.name && (
-                        <ul className="sub-dropdown">
-                          {feature.subFeatures.map((subFeature, i) => (
-                            <li key={i}>
-                              {/* <Link to={`/#${subFeature.replace(/\s+/g, '-').toLowerCase()}`} className="page-scroll dropdown-item" onClick={() => setActiveSection(subFeature)}>
-                                {subFeature}
-                              </Link> */}
-                              <a href="#features" className="page-scroll dropdown-item">
-                                {subFeature}
-                              </a>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </li>
-                  ))}
-                </ul>
+                <div className="dropdown-container">
+                  <div className="dropdown-content">
+                    <div className="dropdown-column">
+                      <div style={{ padding: 15, backgroundColor: "#F0F0F0	", borderRadius: 15, height: 200 }}>
+                        <img src="../img/header/small4.jpg" alt="description of image" style={{ width: 2000, height: 120, objectFit: "cover" }} />
+                        <h4>Management & Services</h4>
+                      </div>
+                      <div>
+                        <div className="featureIcon">
+                          <FaTools className="iconStyle" />
+                          <Link to="#">Maintenance Charge</Link>
+                        </div>
+
+                        <div className="featureIcon">
+                          <FaVoteYea className="iconStyle" />
+                          <Link to="#">Election</Link>
+                        </div>
+                        <div className="featureIcon">
+                          <FaClipboard className="iconStyle" />
+                          <Link to="#">Service Request</Link>
+                        </div>
+                        <div className="featureIcon">
+                          <FaCar className="iconStyle" />
+                          <Link to="#">Garage Rent</Link>
+                        </div>
+                        <div className="featureIcon">
+                          <FaMusic className="iconStyle" />
+                          <Link to="#">Festival</Link>
+                        </div>
+                        <div className="featureIcon">
+                          <FaUsers className="iconStyle" />
+                          <Link to="#">Meeting Arrangement</Link>
+                        </div>
+                        <div className="featureIcon">
+                          <FaClipboard className="iconStyle" />
+                          <Link to="#">Collection & Expenses</Link>
+                        </div>
+                        <div className="featureIcon">
+                          <FaClipboard className="iconStyle" />
+                          <Link to="#">Ladies Club</Link>
+                        </div>
+                        <div className="featureIcon">
+                          <FaClipboard className="iconStyle" />
+                          <Link to="#">Security Gate</Link>
+                        </div>
+                        <div className="featureIcon">
+                          <FaClipboard className="iconStyle" />
+                          <Link to="#">Fun2shh Chat</Link>
+                        </div>
+                        <div className="featureIcon">
+                          <FaClipboard className="iconStyle" />
+                          <Link to="#">Sent/Rent</Link>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="dropdown-column with-line">
+                      <div style={{ padding: 15, backgroundColor: "#F0F0F0	", borderRadius: 15, height: 200 }}>
+                        <img src="../img/header/small5.jpg" alt="description of image" style={{ width: 2000, height: 120, objectFit: "cover" }} />
+                        <h4>Society Information</h4>
+                      </div>
+                      <Link to="#">Notice Board</Link>
+                      <Link to="#">Emergency Contacts</Link>
+                      <Link to="#">External workers</Link>
+                      <Link to="#">Laundry</Link>
+                      <Link to="#">Corpus Fund</Link>
+                      <Link to="#">Local Programs</Link>
+                      <Link to="#">Society Information</Link>
+                      <Link to="#">Society Rule</Link>
+                      <Link to="#">Internal Worker</Link>
+                      <Link to="#">Intercom Details</Link>
+                      <Link to="#">Holidays</Link>
+                      <Link to="#">Society Members History</Link>
+                      <Link to="#">Society Bank Details</Link>
+                    </div>
+
+                  </div>
+                </div>
               )}
             </li>
             <li>
-              <Link to="/#app" className="page-scroll" onClick={() => setActiveSection('app')}>
+              <Link to="/#app" className="page-scroll">
                 Download App
               </Link>
             </li>
             <li>
-              <Link to="/#contact" className="page-scroll" onClick={() => setActiveSection('contact')}>
+              <Link to="/#contact" className="page-scroll">
                 Contact Us
               </Link>
+            </li>
+            <li>
+              <Link to="/#" className="page-scroll" onClick={handleCall}>
+              +1800 2575 2244
+              </Link>
+             
             </li>
           </ul>
         </div>

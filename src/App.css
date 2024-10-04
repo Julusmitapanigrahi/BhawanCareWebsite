@@ -3,13 +3,18 @@
   #app,
   #industry,
   #choose,
+  #app,
+  #industry,
+  #choose,
   #features {
     padding: 20px;
     width: 111%;
   }
 
+
   #about,
   #services,
+  #team,
   #team,
   #testimonials,
   #city,
@@ -81,3 +86,34 @@
     width: 111%;
   }
 } */
+
+@media screen and (max-width: 780px) {
+  #app,
+  #industry,
+  #choose,
+  #features {
+    padding: 20px;
+    width: 111%;
+  }
+  
+  #about,
+  #services,
+  #team,
+  #testimonials,
+  #city,
+  #FAQ,
+  #contact,
+  #footer {
+    width: 111%;
+  }
+
+  #portfolio {
+    width: 110%;
+  }
+
+  
+  #gallery {
+    margin: 20px;
+    width: 111%;
+  }
+}
