@@ -8,9 +8,25 @@ import {
   FaCar,
   FaMusic,
   FaUsers,
+  FaDollarSign,
+  FaFemale,
+  FaLock,
+  FaComment,
+  FaMoneyBillWave,
+  FaStickyNote,
+  FaPhoneAlt,
+  FaBuilding,
+  FaSoap,
+  FaMoneyBill,
+  FaInfoCircle,
+  FaClipboardList,
+  FaUserTie,
+  FaComments,
+  FaCalendarAlt,
+  FaHistory,
 } from 'react-icons/fa'; // Importing the needed icons
 
-export const Navigation = ({ features }) => {
+export const Navigation = ({ features,menuData }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -102,76 +118,120 @@ export const Navigation = ({ features }) => {
                 <div className="dropdown-container">
                   <div className="dropdown-content">
                     <div className="dropdown-column">
-                      <div style={{ padding: 15, backgroundColor: "#F0F0F0	", borderRadius: 15, height: 200 }}>
-                        <img src="../img/header/small4.jpg" alt="description of image" style={{ width: 2000, height: 120, objectFit: "cover" }} />
+                      <div style={{ padding: 15,  borderRadius: 15, height: 200 }}>
+                        <img src="../img/header/small4.png" alt="description of image" style={{ width: 2000, height: 120, objectFit: "cover", padding: 10 }} />
                         <h4>Management & Services</h4>
                       </div>
                       <div>
+                          <div className="featureIcon">
+                            <img  src="../img/header/image1.png" alt="description of image" style={{width: 20, height: 20,  objectFit: "cover" ,  marginRight: 10}} />
+                            <a href="#allFeature">Maintenance Charge</a>
+                          </div>
+                       
                         <div className="featureIcon">
-                          <FaTools className="iconStyle" />
-                          <Link to="#">Maintenance Charge</Link>
-                        </div>
-
-                        <div className="featureIcon">
-                          <FaVoteYea className="iconStyle" />
-                          <Link to="#">Election</Link>
-                        </div>
-                        <div className="featureIcon">
-                          <FaClipboard className="iconStyle" />
-                          <Link to="#">Service Request</Link>
+                        <img  src="../img/header/image2.png" alt="description of image" style={{width: 20, height: 20,  objectFit: "cover" ,  marginRight: 10}} />
+                        <a href="#allFeature">Election</a>
                         </div>
                         <div className="featureIcon">
-                          <FaCar className="iconStyle" />
-                          <Link to="#">Garage Rent</Link>
+                        <img  src="../img/header/image3.png" alt="description of image" style={{width: 20, height: 20,  objectFit: "cover" ,  marginRight: 10}} />
+                          <a href="#allFeature">Service Request</a>
                         </div>
                         <div className="featureIcon">
-                          <FaMusic className="iconStyle" />
-                          <Link to="#">Festival</Link>
+                        <img  src="../img/header/image4.png" alt="description of image" style={{width: 20, height: 20,  objectFit: "cover" ,  marginRight: 10}} />
+                          <a href="#allFeature">Garage Rent</a>
                         </div>
                         <div className="featureIcon">
-                          <FaUsers className="iconStyle" />
-                          <Link to="#">Meeting Arrangement</Link>
+                        <img  src="../img/header/image5.png" alt="description of image" style={{width: 25, height: 25,  objectFit: "cover" ,  marginRight: 10}} />
+                          <a href="#allFeature">Festival</a>
                         </div>
                         <div className="featureIcon">
-                          <FaClipboard className="iconStyle" />
-                          <Link to="#">Collection & Expenses</Link>
+                        <img  src="../img/header/image6.png" alt="description of image" style={{width: 20, height: 20,  objectFit: "cover" ,  marginRight: 10}} />
+                          <a href="#allFeature">Meeting Arrangement</a>
                         </div>
                         <div className="featureIcon">
-                          <FaClipboard className="iconStyle" />
-                          <Link to="#">Ladies Club</Link>
+                        <img  src="../img/header/image7.png" alt="description of image" style={{width: 20, height: 20,  objectFit: "cover" ,  marginRight: 10}} />
+                          <a href="#allFeature">Collection & Expenses</a>
                         </div>
                         <div className="featureIcon">
-                          <FaClipboard className="iconStyle" />
-                          <Link to="#">Security Gate</Link>
+                        <img  src="../img/header/image8.png" alt="description of image" style={{width: 20, height: 20,  objectFit: "cover" ,  marginRight: 10}} />
+                          <a href="#allFeature">Ladies Club</a>
                         </div>
                         <div className="featureIcon">
-                          <FaClipboard className="iconStyle" />
-                          <Link to="#">Fun2shh Chat</Link>
+                        <img  src="../img/header/image9.png" alt="description of image" style={{width: 20, height: 20,  objectFit: "cover" ,  marginRight: 10}} />
+                          <a href="#allFeature">Security Gate</a>
                         </div>
                         <div className="featureIcon">
-                          <FaClipboard className="iconStyle" />
-                          <Link to="#">Sent/Rent</Link>
+                        <img  src="../img/header/image10.png" alt="description of image" style={{width: 20, height: 20,  objectFit: "cover" ,  marginRight: 10}} />
+                          <a href="#allFeature">Fun2shh Chat</a>
+                        </div>
+                        <div className="featureIcon">
+                        <img  src="../img/header/image11.png" alt="description of image" style={{width: 20, height: 20,  objectFit: "cover" ,  marginRight: 10}} />
+                          <a href="#allFeature">Sell/Rent</a>
                         </div>
                       </div>
+                     
+
                     </div>
                     <div className="dropdown-column with-line">
-                      <div style={{ padding: 15, backgroundColor: "#F0F0F0	", borderRadius: 15, height: 200 }}>
-                        <img src="../img/header/small5.jpg" alt="description of image" style={{ width: 2000, height: 120, objectFit: "cover" }} />
+                      <div style={{ padding: 15,  borderRadius: 15, height: 200 }}>
+                        <img src="../img/header/small5.png" alt="description of image" style={{ width: 2000, height: 120, objectFit: "cover",  padding: 10 }} />
                         <h4>Society Information</h4>
                       </div>
-                      <Link to="#">Notice Board</Link>
-                      <Link to="#">Emergency Contacts</Link>
-                      <Link to="#">External workers</Link>
-                      <Link to="#">Laundry</Link>
-                      <Link to="#">Corpus Fund</Link>
-                      <Link to="#">Local Programs</Link>
-                      <Link to="#">Society Information</Link>
-                      <Link to="#">Society Rule</Link>
-                      <Link to="#">Internal Worker</Link>
-                      <Link to="#">Intercom Details</Link>
-                      <Link to="#">Holidays</Link>
-                      <Link to="#">Society Members History</Link>
-                      <Link to="#">Society Bank Details</Link>
+
+                      <div>
+                        <div className="featureIcon">
+                        <img  src="../img/header/image12.png" alt="description of image" style={{width: 20, height: 20,  objectFit: "cover" ,  marginRight: 10}} />
+                          <a href="#allFeature">Notice Board</a>
+                        </div>
+                        <div className="featureIcon">
+                        <img  src="../img/header/image13.png" alt="description of image" style={{width: 20, height: 20,  objectFit: "cover" ,  marginRight: 10}} />
+                          <a href="#allFeature">Emergency Contacts</a>
+                        </div>
+                        <div className="featureIcon">
+                        <img  src="../img/header/image14.png" alt="description of image" style={{width: 20, height: 20,  objectFit: "cover" ,  marginRight: 10}} />
+                          <a href="#allFeature">External workers</a>
+                        </div>
+                        <div className="featureIcon">
+                        <img  src="../img/header/image15.png" alt="description of image" style={{width: 20, height: 20,  objectFit: "cover" ,  marginRight: 10}} />
+                          <a href="#allFeature">Laundry</a>
+                        </div>
+                        <div className="featureIcon">
+                        <img  src="../img/header/image16.png" alt="description of image" style={{width: 20, height: 20,  objectFit: "cover" ,  marginRight: 10}} />
+                          <a href="#allFeature">Corpus Fund</a>
+                        </div>
+                        <div className="featureIcon">
+                        <img  src="../img/header/image17.png" alt="description of image" style={{width: 20, height: 20,  objectFit: "cover" ,  marginRight: 10}} />
+                          <a href="#allFeature">Local Programs</a>
+                        </div>
+                        <div className="featureIcon">
+                        <img  src="../img/header/image18.png" alt="description of image" style={{width: 20, height: 20,  objectFit: "cover" ,  marginRight: 10}} />
+                          <a href="#allFeature">Society Information</a>
+                        </div>
+                        <div className="featureIcon">
+                        <img  src="../img/header/image19.png" alt="description of image" style={{width: 20, height: 20,  objectFit: "cover" ,  marginRight: 10}} />
+                          <a href="#allFeature">Society Rule</a>
+                        </div>
+                        <div className="featureIcon">
+                        <img  src="../img/header/image20.png" alt="description of image" style={{width: 20, height: 20,  objectFit: "cover" ,  marginRight: 10}} />
+                          <a href="#allFeature">Internal Worker</a>
+                        </div>
+                        <div className="featureIcon">
+                        <img  src="../img/header/image21.png" alt="description of image" style={{width: 20, height: 20,  objectFit: "cover" ,  marginRight: 10}} />
+                          <a href="#allFeature">Intercom Details</a>
+                        </div>
+                        <div className="featureIcon">
+                        <img  src="../img/header/image22.png" alt="description of image" style={{width: 20, height: 20,  objectFit: "cover" ,  marginRight: 10}} />
+                          <a href="#allFeature">Holidays</a>
+                        </div>
+                        <div className="featureIcon">
+                        <img  src="../img/header/image23.png" alt="description of image" style={{width: 20, height: 20,  objectFit: "cover" ,  marginRight: 10}} />
+                          <a href="#allFeature">Society Members History</a>
+                        </div>
+                        <div className="featureIcon" style={{ paddingBottom: 10 }}>
+                        <img  src="../img/header/image24.png" alt="description of image" style={{width: 20, height: 20,  objectFit: "cover" ,  marginRight: 10}} />
+                          <a href="#allFeature">Society Bank Details</a>
+                        </div>
+                      </div>
                     </div>
 
                   </div>
@@ -192,7 +252,7 @@ export const Navigation = ({ features }) => {
               <Link to="/#" className="page-scroll" onClick={handleCall}>
               +1800 2575 2244
               </Link>
-             
+
             </li>
           </ul>
         </div>

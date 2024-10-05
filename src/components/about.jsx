@@ -11,7 +11,7 @@ export const About = (props) => {
               <img src="img/about.jpg" className="img-fluid" alt="About Us" />
             </AnimatedComponent>
           </div>
-          <div className="col-12 col-md-6">
+          <div className="col-xs-12 col-md-6">
             <div className="about-text">
               <AnimatedComponent animationType="scaleUp">
                 <h2>About Us</h2>
