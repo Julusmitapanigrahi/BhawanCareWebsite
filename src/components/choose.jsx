@@ -11,11 +11,11 @@ const Choose = () => {
                 </AnimatedComponent>
             </div>
 
-            <div 
-            className="card__container"
+            <div
+                className="card__container"
             >
-                <article 
-                className="card__article"
+                <article
+                    className="card__article"
                 >
                     <img src="img/choose/image2.jpg" alt="Vancouver Mountains" className="card__img" />
 

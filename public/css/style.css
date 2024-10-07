@@ -1512,6 +1512,7 @@ a:focus,
   overflow: hidden;
   border: 1px solid #ddd; /* Soft border */
   box-sizing: border-box;
+  color: #94664b;
 }
 
 /* Add a hover effect with scale and background color change */
@@ -1819,6 +1820,7 @@ a:focus,
 
 #team h4 {
   margin: 5px 0;
+  color: #E8A905;
 }
 
 #team .team-img {
