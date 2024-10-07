@@ -962,6 +962,7 @@ a:focus,
   margin-bottom: 10px;
   position: relative;
   padding-left: 20px;
+  color: #94664b;
 }
 #about .about-text li:before {
   content: "\f00c";
