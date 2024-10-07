@@ -22,6 +22,7 @@ import { Awards } from "./components/awards";
 import { AboutContact } from "./components/aboutContact";
 import { Additional } from "./components/additionalFeatures";
 import { NewTestimonial } from "./components/newTestimonial";
+import { AboutPage } from "./components/aboutPage";
 
 // Component to handle hash-based scrolling
 const ScrollToSection = () => {
@@ -89,6 +90,15 @@ const App = () => {
               />
             }
           />
+          <Route
+            path="/about-page"
+            element={
+              <AboutPage
+                data={landingPageData.About} // Pass the data prop to AboutPage
+              />
+            }
+          />
+
           <Route path="/common/:section" element={<Common />} />
           <Route path="/allFeature" element={<AllFeature
             data={landingPageData.AllFeature}

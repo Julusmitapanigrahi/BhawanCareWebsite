@@ -2,28 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import {
   FaAngleDown,
-  FaTools,
-  FaVoteYea,
-  FaClipboard,
-  FaCar,
-  FaMusic,
-  FaUsers,
-  FaDollarSign,
-  FaFemale,
-  FaLock,
-  FaComment,
-  FaMoneyBillWave,
-  FaStickyNote,
-  FaPhoneAlt,
-  FaBuilding,
-  FaSoap,
-  FaMoneyBill,
-  FaInfoCircle,
-  FaClipboardList,
-  FaUserTie,
-  FaComments,
-  FaCalendarAlt,
-  FaHistory,
 } from 'react-icons/fa'; // Importing the needed icons
 
 export const Navigation = ({ features,menuData }) => {

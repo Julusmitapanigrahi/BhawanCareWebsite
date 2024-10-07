@@ -20,6 +20,10 @@ export const Header = (props) => {
     threshold: 0.5,
   });
 
+  const handleWhatsApp = () => {
+    window.open('https://wa.me/917894318795'); // Your WhatsApp number
+  };
+
   React.useEffect(() => {
     setSmallImagesInView([firstImageInView, secondImageInView, thirdImageInView]);
   }, [firstImageInView, secondImageInView, thirdImageInView]);
@@ -42,7 +46,7 @@ export const Header = (props) => {
             <button onClick={openModal} className="btn btn-custom btn-lg">
               Book A Demo
             </button>
-            <a href="#contact" className="btn btn-send btn-lg page-scroll">
+            <a href="#" className="btn btn-send btn-lg page-scroll" onClick={handleWhatsApp}>
               Contact Us
             </a>
           </div>
