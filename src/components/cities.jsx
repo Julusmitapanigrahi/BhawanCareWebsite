@@ -6,9 +6,9 @@ export const Cities = () => {
     const cities = [
         'ANDHRA PRADESH', 'ASSAM', 'BIHAR', 'CHHATTISGARH',
         'GOA', 'GUJRAT', 'HARYANA', 'HIMACHAL PRADESH', 'JHARKHAND', 
-        'KARNATAKA', 'KERALA', 'MADHYA PRADESH', 'MAHARASHTRA', 
+        'KARNATAKA', 'KERALA', 'MADHYA PRADESH', 'MAHARASHTRA', 'NEW DELHI', 
         'ODISHA', 'PUNJAB', 'RAJASTHAN', 'TAMIL NADU', 'TELANGANA',
-        'TRIPURA', 'UTTAR PRADESH', 'UTTRAKHAND', 'WEST BENGAL','NEW DELHI',  
+        'TRIPURA', 'UTTAR PRADESH', 'UTTRAKHAND', 'WEST BENGAL', 
     ];
 
     return (
