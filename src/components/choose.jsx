@@ -17,7 +17,7 @@ const Choose = () => {
                 <article
                     className="card__article"
                 >
-                    <img src="img/choose/image2.jpg" alt="Vancouver Mountains" className="card__img" />
+                    <img src="img/choose/image2.png" alt="Vancouver Mountains" className="card__img" />
 
                     <div className="card__data">
                         <span className="card__title">Choice Of Every Society </span>

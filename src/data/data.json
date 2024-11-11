@@ -73,7 +73,7 @@
       "title": "Worker Details",
       "paragraph": "Access a verified list of domestic help and service providers within the society. Find detailed profiles, contact information, and reviews to hire reliable workers.",
       "largeImage": "img/portfolio/03-large.jpg",
-      "smallImage": "img/portfolio/03-small.jpg"
+      "smallImage": "img/portfolio/03-small.png"
     },
     {
       "title": "Society and Flats Information",
@@ -92,6 +92,14 @@
       "paragraph": "Schedule and manage society meetings effortlessly. Send invites, set agendas, and keep track of meeting minutes, all through the app.",
       "largeImage": "img/portfolio/06-large.jpg",
       "smallImage": "img/portfolio/06-small.jpg"
+    }
+  ],
+
+
+  "Career": [
+    {
+      "headingC": "Join Our Team",
+      "descriptionC": "We are looking for talented individuals to join our innovative team and make a difference."
     }
   ],
 
@@ -204,7 +212,7 @@
     }
   ],
   "Contact": {
-    "address": "Plot No. - N5/123, 3rd floor, Radhamani Building, Jayadev Vihar Rd, Bhubaneswar, Odisha 751013",
+    "address": "Block - N5/123, 3rd floor, Radhamani Building, Jayadev Vihar Rd (Near Biju Pattnaik College), Bhubaneswar, Odisha 751013",
     "phone": "1800-202-2000",
     "email": "info@cpsorg24.com",
     "facebook": "fb.com",

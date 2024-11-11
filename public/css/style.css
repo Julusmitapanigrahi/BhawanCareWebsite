@@ -1707,6 +1707,56 @@ a:focus,
   }
 }
 
+
+
+/* Career Page */
+.career-container {
+  text-align: center;
+  margin: 20px;
+  padding: 100px;
+  /* border: 1px solid #ccc;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: auto; */
+}
+
+.career-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 50%; /* Adjust this to control the width relative to the container */
+  height: 400px; /* Increase this value for a larger image */
+  object-fit: cover; /* Ensures the image maintains aspect ratio */
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+/* .career-heading {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.career-description {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+} */
+
+.career-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.career-button:hover {
+  background-color: #0056b3;
+}
+
+
+
 /* Portfolio Section */
 #portfolio {
   padding: 100px 20px;

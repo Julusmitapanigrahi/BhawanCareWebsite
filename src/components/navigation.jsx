@@ -227,6 +227,11 @@ export const Navigation = ({ features,menuData }) => {
               </Link>
             </li>
             <li>
+              <Link to="/Career">
+                Career
+              </Link>
+            </li>
+            <li>
               <Link to="/#" className="page-scroll" onClick={handleCall}>
               +1800-202-2000
               </Link>

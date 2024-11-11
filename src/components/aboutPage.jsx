@@ -8,7 +8,7 @@ export const AboutPage = ({ data }) => {
         {/* Image Section */}
         <div className="image-container">
           <img
-            src="img/about.jpg"
+            src="img/about.png"
             className="img-responsive"
             alt="About"
             style={{ width: "100%", height: "auto", borderRadius: "10px" }}
