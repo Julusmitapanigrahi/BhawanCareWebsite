@@ -1,12 +1,18 @@
 @media screen and (max-width: 400px) {
+  #app,
+  #industry,
+  #choose,
   #features {
     padding: 20px;
     width: 111%;
   }
+
   #about,
   #services,
-  #testimonials,
   #team,
+  #testimonials,
+  #city,
+  #FAQ,
   #contact,
   #footer {
     width: 111%;
@@ -14,5 +20,62 @@
 
   #portfolio {
     width: 110%;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  #app,
+  #industry,
+  #choose,
+  #features {
+    padding: 20px;
+    width: 111%;
+  }
+  
+  #about,
+  #services,
+  #team,
+  #testimonials,
+  #city,
+  #FAQ,
+  #contact,
+  #footer {
+    width: 111%;
+  }
+
+  #portfolio {
+    width: 110%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  #app,
+  #industry,
+  #choose,
+  #features {
+    padding: 20px;
+    width: 111%;
+  }
+  
+  #about,
+  #services,
+  #team,
+  #testimonials,
+  #city,
+  #FAQ,
+  #contact,
+  #footer {
+    width: 111%;
+  }
+
+  #portfolio {
+    width: 110%;
+  }
+
+  
+  #gallery {
+    margin: 20px;
+    width: 111%;
   }
 }

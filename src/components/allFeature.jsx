@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Player } from '@lottiefiles/react-lottie-player';
 import { FaAngleDown } from 'react-icons/fa';
 import AnimatedComponent from "./animation";
@@ -33,21 +33,15 @@ const AllFeature = ({ data, societyInfo }) => {
   const [showTextIndex1, setShowTextIndex1] = useState(null);
   const [showTextIndex2, setShowTextIndex2] = useState(null);
   const [landingPageData, setLandingPageData] = useState(JsonData);
+  const autoCloseTimeout1 = useRef(null);
+  const autoCloseTimeout2 = useRef(null);
+
+  const featureCardRefs = useRef([]);
+  const societyInfoRefs = useRef([]);
 
   useEffect(() => {
     setLandingPageData(JsonData);
   }, []);
-
-  // If landingPageData is not loaded, show loading state
-  if (!landingPageData) {
-    return <div>Loading...</div>;
-  }
-
-  // Array of background colors for the cards
-  const colors = [
-    "#cce6ff", "#f2d9d9", "#ccccff", "#ffccff",
-    "#ccffcc", "#ffffcc", "#ffebcc", "#d6f5d6", "#ffd9cc"
-  ];
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -55,8 +49,61 @@ const AllFeature = ({ data, societyInfo }) => {
 
   const handleMouseEnter = (index) => setHoveredIndex(index);
   const handleMouseLeave = () => setHoveredIndex(null);
-  const toggleTextDisplay1 = (index) => setShowTextIndex1(index === showTextIndex1 ? null : index);
-  const toggleTextDisplay2 = (index) => setShowTextIndex2(index === showTextIndex2 ? null : index);
+
+  // Function to handle auto-closing of the card after 5 seconds
+  const setAutoCloseTimeout1 = (index) => {
+    clearTimeout(autoCloseTimeout1.current);
+    autoCloseTimeout1.current = setTimeout(() => {
+      setShowTextIndex1(null);
+    }, 2000); // 5000ms = 5 seconds
+  };
+
+  const setAutoCloseTimeout2 = (index) => {
+    clearTimeout(autoCloseTimeout2.current);
+    autoCloseTimeout2.current = setTimeout(() => {
+      setShowTextIndex2(null);
+    }, 2000); // 5000ms = 5 seconds
+  };
+
+  const toggleTextDisplay1 = (index) => {
+    setShowTextIndex1((prevIndex) => {
+      const newIndex = prevIndex === index ? null : index;
+      if (newIndex !== null) {
+        setAutoCloseTimeout1(index);
+      } else {
+        clearTimeout(autoCloseTimeout1.current);
+      }
+      return newIndex;
+    });
+  };
+
+  const toggleTextDisplay2 = (index) => {
+    setShowTextIndex2((prevIndex) => {
+      const newIndex = prevIndex === index ? null : index;
+      if (newIndex !== null) {
+        setAutoCloseTimeout2(index);
+      } else {
+        clearTimeout(autoCloseTimeout2.current);
+      }
+      return newIndex;
+    });
+  };
+
+  useEffect(() => {
+    return () => {
+      clearTimeout(autoCloseTimeout1.current);
+      clearTimeout(autoCloseTimeout2.current);
+    };
+  }, []);
+
+  if (!landingPageData) {
+    return <div>Loading...</div>;
+  }
+
+  const colors = [
+    "#cce6ff", "#f2d9d9", "#ccccff", "#ffccff",
+    "#ccffcc", "#ffffcc", "#ffebcc", "#d6f5d6", "#ffd9cc"
+  ];
 
   return (
     <ErrorBoundary>
@@ -73,6 +120,7 @@ const AllFeature = ({ data, societyInfo }) => {
             {data.slice(0, 5).map((feature, index) => (
               <div
                 key={index}
+                ref={(el) => featureCardRefs.current[index] = el}
                 className="featureCard"
                 style={{
                   backgroundColor: hoveredIndex === index ? colors[index % colors.length] : "#f5f5f5",
@@ -82,12 +130,10 @@ const AllFeature = ({ data, societyInfo }) => {
               >
                 <div className="title-icon-container">
                   <h3>{feature.title}</h3>
-                  {showTextIndex1 !== index && (
-                    <FaAngleDown
-                      onClick={() => toggleTextDisplay1(index)}
-                      style={{ fontSize: "24px", cursor: "pointer", marginLeft: '10px' }}
-                    />
-                  )}
+                  <FaAngleDown
+                    onClick={() => toggleTextDisplay1(index)}
+                    style={{ fontSize: "24px", cursor: "pointer", marginLeft: '10px' }}
+                  />
                 </div>
                 {showTextIndex1 === index && (
                   <div className="scrolling-text">
@@ -103,6 +149,7 @@ const AllFeature = ({ data, societyInfo }) => {
             {data.slice(5, 9).map((feature, index) => (
               <div
                 key={index + 5}
+                ref={(el) => featureCardRefs.current[index + 5] = el}
                 className="featureCard"
                 style={{
                   backgroundColor: hoveredIndex === index + 5 ? colors[(index + 5) % colors.length] : "#f5f5f5",
@@ -112,12 +159,10 @@ const AllFeature = ({ data, societyInfo }) => {
               >
                 <div className="title-icon-container">
                   <h3>{feature.title}</h3>
-                  {showTextIndex1 !== index + 5 && (
-                    <FaAngleDown
-                      onClick={() => toggleTextDisplay1(index + 5)}
-                      style={{ fontSize: "24px", cursor: "pointer", marginLeft: '10px' }}
-                    />
-                  )}
+                  <FaAngleDown
+                    onClick={() => toggleTextDisplay1(index + 5)}
+                    style={{ fontSize: "24px", cursor: "pointer", marginLeft: '10px' }}
+                  />
                 </div>
                 {showTextIndex1 === index + 5 && (
                   <div className="scrolling-text">
@@ -161,6 +206,7 @@ const AllFeature = ({ data, societyInfo }) => {
             {societyInfo.slice(0, 5).map((info, index) => (
               <div
                 key={index}
+                ref={(el) => societyInfoRefs.current[index] = el}
                 className="featureCard"
                 style={{
                   backgroundColor: hoveredIndex === index ? colors[index % colors.length] : "#f5f5f5",
@@ -170,12 +216,10 @@ const AllFeature = ({ data, societyInfo }) => {
               >
                 <div className="title-icon-container">
                   <h3>{info.title1}</h3>
-                  {showTextIndex2 !== index && (
-                    <FaAngleDown
-                      onClick={() => toggleTextDisplay2(index)}
-                      style={{ fontSize: "24px", cursor: "pointer", marginLeft: '10px' }}
-                    />
-                  )}
+                  <FaAngleDown
+                    onClick={() => toggleTextDisplay2(index)}
+                    style={{ fontSize: "24px", cursor: "pointer", marginLeft: '10px' }}
+                  />
                 </div>
                 {showTextIndex2 === index && (
                   <div>
@@ -191,6 +235,7 @@ const AllFeature = ({ data, societyInfo }) => {
             {societyInfo.slice(5, 11).map((info, index) => (
               <div
                 key={index + 5}
+                ref={(el) => societyInfoRefs.current[index + 5] = el}
                 className="featureCard"
                 style={{
                   backgroundColor: hoveredIndex === index + 5 ? colors[(index + 5) % colors.length] : "#f5f5f5",
@@ -200,12 +245,10 @@ const AllFeature = ({ data, societyInfo }) => {
               >
                 <div className="title-icon-container">
                   <h3>{info.title1}</h3>
-                  {showTextIndex2 !== index + 5 && (
-                    <FaAngleDown
-                      onClick={() => toggleTextDisplay2(index + 5)}
-                      style={{ fontSize: "24px", cursor: "pointer", marginLeft: '10px' }}
-                    />
-                  )}
+                  <FaAngleDown
+                    onClick={() => toggleTextDisplay2(index + 5)}
+                    style={{ fontSize: "24px", cursor: "pointer", marginLeft: '10px' }}
+                  />
                 </div>
                 {showTextIndex2 === index + 5 && (
                   <div>

@@ -7,7 +7,7 @@ const Choose = () => {
         <div className="chooseContainer">
             <div className="col-md-10 col-md-offset-1 section-title">
                 <AnimatedComponent animationType="scaleUp" >
-                    <h2 className='service'>Why Choose Us ?</h2>
+                    <h2 className='service centerAlign'>Why Choose Us ?</h2>
                 </AnimatedComponent>
             </div>
 
@@ -20,8 +20,8 @@ const Choose = () => {
                     <img src="img/image2.jpg" alt="Vancouver Mountains" className="card__img" />
 
                     <div className="card__data">
-                        <span className="card__title">Diverse Expertise Spectrum</span>
-                        <h2 className="card__description"> Our team brings a wealth of knowledge and experience that sets us apart.</h2>
+                        <span className="card__title">Choice Of Every Society </span>
+                        <h2 className="card__description"> It is the manifestation of cultural norms, ethical standards, and societal aspirations, which evolve over time as the society faces new challenges and opportunities.</h2>
                     </div>
                 </article>
 
@@ -29,8 +29,8 @@ const Choose = () => {
                     <img src="img/image.jpg" alt="Poon Hill" className="card__img" />
 
                     <div className="card__data">
-                        <span className="card__title">Individualized Approaches</span>
-                        <h2 className="card__description">  We customize our services to meet your specific needs, ensuring optimal results.</h2>
+                        <span className="card__title">One Step Solution</span>
+                        <h2 className="card__description">"Providing simple, effective solutions that empower communities to make better choices, one step at a time.</h2>
                     </div>
                 </article>
 
@@ -38,8 +38,8 @@ const Choose = () => {
                     <img src="/img/image3.jpg" alt="Bojcin Forest" className="card__img" />
 
                     <div className="card__data">
-                        <span className="card__title">Commitment to Exceptionalism</span>
-                        <h2 className="card__description"> Our dedication to exceptionalism inspires us to elevate your experience beyond the ordinary.</h2>
+                        <span className="card__title">Data Privacy</span>
+                        <h2 className="card__description">Ensuring privacy protects individuals from identity theft, financial fraud, and other malicious activities.</h2>
                     </div>
                 </article>
             </div>

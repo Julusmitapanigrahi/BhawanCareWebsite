@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import { Navigation } from "./components/navigation";
 import { Header } from "./components/header";
 import { Features } from "./components/features";
@@ -23,9 +23,23 @@ import { Awards } from "./components/awards";
 import { AboutContact } from "./components/aboutContact";
 import { Additional } from "./components/additionalFeatures";
 
+// Component to handle hash-based scrolling
+const ScrollToSection = () => {
+  const { hash } = useLocation();  // Get the hash from the URL
+  useEffect(() => {
+    if (hash) {
+      const element = document.getElementById(hash.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" }); // Scroll smoothly to the section
+      }
+    }
+  }, [hash]); // Trigger when hash changes
+
+  return null; // This component doesn't render anything
+};
+
 const App = () => {
   const [landingPageData, setLandingPageData] = useState(null);
-  const [activeSection, setActiveSection] = useState("home"); // New state to track active section
 
   useEffect(() => {
     setLandingPageData(JsonData);
@@ -35,78 +49,36 @@ const App = () => {
     return <div>Loading...</div>;
   }
 
-  if (!landingPageData) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <Router>
+      <ScrollToSection /> {/* Scroll component to handle hash change */}
       <div>
-        {/* Pass setActiveSection to Navigation */}
-        <Navigation setActiveSection={setActiveSection} features={landingPageData.Navigation} />
+        <Navigation features={landingPageData.Navigation} />
 
-        {/* Conditionally render sections based on the activeSection */}
         <Routes>
           <Route
             path="/"
             element={
               <>
-                {activeSection === "home" && (
-                  <>
-                    <Header data={landingPageData.Header} />
-                    <About data={landingPageData.About} />
-                    <Choose data={landingPageData.Services} />
-                    <Features data={landingPageData.Features} />
-                    <Awards />
-                    <Additional data={landingPageData.Additional} />
-                    <Gallery data={landingPageData.Gallery} />
-                    <Services data={landingPageData.Services} />
-                    <Team data={landingPageData.Team} />
-                    <DownloadApp data={landingPageData.DownloadApp} />
-                    <Industries />
-                    <Cities />
-                    <Testimonials data={landingPageData.Testimonials} />
-                    <FAQPage />
-                    <Contact data={landingPageData.Contact} />
-                    <Widget data={landingPageData.Widget} />
-                  </>
-                )}
-
-                {activeSection === "about" && (
-                  <>
-                    <About data={landingPageData.About} />
-                    <Contact data={landingPageData.Contact} />
-                  </>
-                )}
-
-                {activeSection === "services" && (
-                  <>
-                    <Services data={landingPageData.Services} />
-                    <Contact data={landingPageData.Contact} />
-                  </>
-                )}
-
-                {activeSection === "features" && (
-                  <Features data={landingPageData.Features} />
-                )}
-
-                {activeSection === "app" && (
-                  <>
-                    <DownloadApp data={landingPageData.DownloadApp} />
-                    <Contact data={landingPageData.Contact} />
-                  </>
-                )}
-
-                {activeSection === "contact" && (
-                  <>
-                    <AboutContact data={landingPageData.AboutContact} />
-                    <Contact data={landingPageData.Contact} />
-                  </>
-                )}
+                <Header data={landingPageData.Header} />
+                <About data={landingPageData.About} />
+                <Choose data={landingPageData.Services} />
+                <Features data={landingPageData.Features} />
+                <Awards />
+                <Additional data={landingPageData.Additional} />
+                <Gallery data={landingPageData.Gallery} />
+                <Services data={landingPageData.Services} />
+                <Team data={landingPageData.Team} />
+                <DownloadApp data={landingPageData.DownloadApp} />
+                <Industries />
+                <Cities />
+                <Testimonials data={landingPageData.Testimonials} />
+                <FAQPage />
+                <Contact data={landingPageData.Contact} />
+                <Widget data={landingPageData.Widget} />
               </>
             }
           />
-
           <Route
             path="/features"
             element={
@@ -120,7 +92,6 @@ const App = () => {
           <Route path="/allFeature" element={<AllFeature
             data={landingPageData.AllFeature}
             societyInfo={landingPageData.SocietyInfo} />} />
-
         </Routes>
       </div>
     </Router>
