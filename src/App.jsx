@@ -25,6 +25,7 @@ import { NewTestimonial } from "./components/newTestimonial";
 import { AboutPage } from "./components/aboutPage";
 import { Career } from "./components/career";
 import { ContactUs } from "./components/mailConfig";
+import TermsAndConditions from "./components/termsConditions";
 
 // Component to handle hash-based scrolling
 const ScrollToSection = () => {
@@ -63,7 +64,7 @@ const App = () => {
             path="/"
             element={
               <>
-                <ContactUs />
+                {/* <ContactUs /> */}
                 <Header data={landingPageData.Header} />
                 <About data={landingPageData.About} />
                 <Choose data={landingPageData.Services} />
@@ -84,6 +85,7 @@ const App = () => {
               </>
             }
           />
+          <Route path="/terms" element={<TermsAndConditions/>} />
           <Route
             path="/features"
             element={

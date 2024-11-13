@@ -1,5 +1,6 @@
 import React from "react";
 import AnimatedComponent from "./animation";
+import { Contact } from "./contact";
 
 export const AboutPage = ({ data }) => {
   return (
@@ -81,7 +82,7 @@ export const AboutPage = ({ data }) => {
             </div>
           </div>
         </div>
-      </div>
+      </div>          
     </div>
   );
 };

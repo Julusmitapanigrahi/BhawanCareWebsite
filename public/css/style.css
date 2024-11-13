@@ -420,14 +420,14 @@ a:focus,
 
 @media (max-width: 1200px) {
   .intro {
-    padding-top: 50px;
+    padding-top: 180px;
   }
 }
 
 /* Responsive styles for 1024px screen width */
 @media (max-width: 1024px) {
   .intro {
-    margin-top: 20px; 
+    margin-top: 0px; 
     /* padding-bottom: 10px;  */
   }
 
@@ -473,7 +473,7 @@ a:focus,
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-top: 90px; 
+    padding-top: 150px; 
     min-height: auto; 
   }
 
@@ -527,7 +527,7 @@ a:focus,
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 90px;
+    padding-top: 150px;
     min-height: auto;
   }
 
@@ -1721,12 +1721,13 @@ a:focus,
 }
 
 .career-image {
-  display: block;
+  /* display: block; */
   margin: 0 auto;
-  max-width: 50%; /* Adjust this to control the width relative to the container */
-  height: 400px; /* Increase this value for a larger image */
-  object-fit: cover; /* Ensures the image maintains aspect ratio */
-  margin-bottom: 15px;
+  /* max-width: 50%;  */
+  /* height: 400px;  */
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 20px;
   border-radius: 8px;
 }
 /* .career-heading {
@@ -3191,6 +3192,10 @@ img {
   margin: 0 auto;
 }
 
+.testimonial-section-title {
+  margin-bottom: 1em;
+}
+
 .testimonial-section-title h2 {
   font-size: 2.5rem;
   position: relative;
@@ -3211,23 +3216,25 @@ img {
 .testimonial-row {
   display: flex;
   justify-content: flex-start;
+  width: 100%;
   transition: transform 0.5s ease;
 }
 
 .testimonial-column {
   flex: 0 0 33.33%;
   max-width: 33.33%;
-  padding: 0 20px;
+  padding: 10 20px;
   opacity: 0.5;
   transition: opacity 0.5s ease;
 }
+
 
 .testimonial-column.active {
   opacity: 1;
 }
 
 .testimonial-box {
-  padding: 10px;
+  padding: 30px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
@@ -3251,6 +3258,13 @@ img {
   font-size: 15px;
   font-weight: bold;
   color: #E8A905;
+}
+
+.testimonial-state {
+  font-size: 14px;
+  font-weight: bold;
+  /* color: #E8A905; */
+  font-family: italic;
 }
 
 .testimonial-dots {
@@ -3291,6 +3305,10 @@ img {
   .testimonial-author {
     font-size: 14px;
   }
+
+  .testimonial-box {
+    padding: 20px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -3310,6 +3328,10 @@ img {
   .testimonial-author {
     font-size: 13px;
   }
+
+  .testimonial-box {
+    padding: 20px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -3328,5 +3350,9 @@ img {
   .testimonial-img {
     width: 48px;
     height: 48px;
+  }
+
+  .testimonial-box {
+    padding: 20px;
   }
 }

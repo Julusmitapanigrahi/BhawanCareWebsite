@@ -18,39 +18,72 @@ const CareerModal = ({ isOpen, onRequestClose }) => {
         cv: null,
     });
 
-    // Handle form field changes
+    const [file, setFile] = useState(null);
+    const [downloadLink, setDownloadLink] = useState(null); // State to hold the downloadable link
+
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData(prevState => ({
-            ...prevState,
-            [name]: value
-        }));
+        setFormData({ ...formData, [name]: value });
     };
 
-    // Handle file input change
     const handleFileChange = (e) => {
-        const file = e.target.files[0];
-        setFormData(prevState => ({
-            ...prevState,
-            cv: file
-        }));
+        setFile(e.target.files[0]);
     };
 
-    const sendEmail = (e) => {
-        e.preventDefault();
+    const convertFileToBase64 = (file) => {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = () => resolve(reader.result.split(',')[1]); // Removing 'data:application/pdf;base64,' part
+            reader.onerror = (error) => reject(error);
+        });
+    };
 
-        emailjs
-          .sendForm('service_vnpsxlp', 'template_xape1mx', form.current, 'PTAShub-ODpBrLKv5')
-          .then(
-            () => {
-              console.log('SUCCESS!');
-              alert("Submitted Successfully!");
-            },
-            (error) => {
-              console.log('FAILED...', error.text);
-              alert("Error Sending Message!");
-            },
-          );
+    const createDownloadLink = (base64File) => {
+        const byteCharacters = atob(base64File);
+        const byteArray = new Uint8Array(byteCharacters.length);
+        for (let i = 0; i < byteCharacters.length; i++) {
+            byteArray[i] = byteCharacters.charCodeAt(i);
+        }
+        const blob = new Blob([byteArray], { type: "application/octet-stream" });
+        const url = URL.createObjectURL(blob);
+        setDownloadLink(url); // Set the download link state
+    };
+
+    const sendEmail = async (e) => {
+        e.preventDefault();
+        if (!file) {
+            alert("Please attach a file before submitting.");
+            return;
+        }
+
+        try {
+            const base64File = await convertFileToBase64(file);
+
+            // Send email with the base64 file as the 'cv' variable
+            emailjs.send('service_4211m8l', 'template_y5lo1uw', {
+                user_name: formData.user_name,
+                user_email: formData.user_email,
+                user_contactNumber: formData.user_contactNumber,
+                user_address: formData.user_address,
+                user_state: formData.user_state,
+                user_city: formData.user_city,
+                user_pincode: formData.user_pincode,
+                // cv: base64File, // Pass base64 file content here
+            }, '7JbFWgAbd51t2TcEH')
+                .then(() => {
+                    console.log('SUCCESS!');
+                    alert("Submitted Successfully!");
+                    createDownloadLink(base64File); // Create a downloadable link
+                })
+                .catch((error) => {
+                    console.error('FAILED...', error);
+                    alert(`Error Sending Message! ${error.message || error.text || 'Unknown error'}`);
+                });
+        } catch (error) {
+            console.error("Error converting file to base64:", error);
+            alert("Error processing the file. Please try again.");
+        }
     };
 
     useEffect(() => {
@@ -104,12 +137,11 @@ const CareerModal = ({ isOpen, onRequestClose }) => {
                 <FaTimes style={{ color: '#FF6347' }} />
             </button>
 
-            <p style={{ textAlign: 'center', color: '#94664b', marginBottom: '20px' }}>
-                We are excited to invite you to explore a rewarding career with us at CPS (P) LTD ! Join a team where your skills are valued, and your growth is supported. Discover your potential and make an impact with us.
-                Apply now to be part of our journey.
+            <p style={{ textAlign: 'center', marginBottom: '20px' }}>
+                Please fill in your details to request a demo.
             </p>
-            <h1>JOIN US</h1>
-            <form ref={form} onSubmit={sendEmail} style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
+            <form ref={form} onSubmit={sendEmail} method="post" encType="multipart/form-data" style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
+                {/* Form Fields */}
                 <div className="row">
                     <div className="col-md-6">
                         <input
@@ -165,7 +197,7 @@ const CareerModal = ({ isOpen, onRequestClose }) => {
                 </div>
 
                 <div className="row">
-                    <div className="col-md-6">
+                    <div className="col-md-4">
                         <input
                             type="text"
                             name="user_state"
@@ -177,7 +209,7 @@ const CareerModal = ({ isOpen, onRequestClose }) => {
                             style={inputStyle}
                         />
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-md-4">
                         <input
                             type="text"
                             name="user_city"
@@ -189,10 +221,7 @@ const CareerModal = ({ isOpen, onRequestClose }) => {
                             style={inputStyle}
                         />
                     </div>
-                </div>
-
-                <div className="row">
-                    <div className="col-md-6">
+                    <div className="col-md-4">
                         <input
                             type="text"
                             name="user_pincode"
@@ -204,15 +233,20 @@ const CareerModal = ({ isOpen, onRequestClose }) => {
                             style={inputStyle}
                         />
                     </div>
-                    {/* <div className="col-md-6">
+                </div>
+
+                {/* File input */}
+                <div className="row">
+                    <div className="col-md-6">
                         <input
                             type="file"
                             name="cv"
                             className="form-control"
                             onChange={handleFileChange}
+                            accept=".pdf,.docx,.jpg,.png"
                             style={inputStyle}
                         />
-                    </div> */}
+                    </div>
                 </div>
 
                 <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
@@ -233,6 +267,15 @@ const CareerModal = ({ isOpen, onRequestClose }) => {
                     </button>
                 </div>
             </form>
+
+            {/* Show the downloadable link after submission */}
+            {/* {downloadLink && (
+                <div style={{ marginTop: '20px', textAlign: 'center' }}>
+                    <a href={downloadLink} download="cv-file" style={{ color: '#4CAF50', textDecoration: 'none' }}>
+                        Download your CV file
+                    </a>
+                </div>
+            )} */}
         </Modal>
     );
 };
@@ -241,9 +284,9 @@ const CareerModal = ({ isOpen, onRequestClose }) => {
 const inputStyle = {
     padding: '10px',
     borderRadius: '8px',
-    border: '1px solid #FFF2C1',
+    border: '1px solid #FFEBAB',
     fontSize: '12px',
-    color: '#94664b',
+    marginBottom: '10px',
 };
 
 export default CareerModal;
