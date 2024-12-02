@@ -50,11 +50,11 @@ export const Gallery = () => {
     { logo: '/img/certificates/GDPR.png' },
     { logo: '/img/certificates/PCI.png' },
     { logo: '/img/certificates/soc-2.png' },
-    { logo: '/img/certificates/cmmi.png' },
+    // { logo: '/img/certificates/cmmi.png' },
   ];
 
   return (
-    <div className="gallery-section">
+    <div id='gallery' className="gallery-section">
       <AnimatedComponent animationType="scaleUp" >
         <h2>Recognized Achievements</h2>
       </AnimatedComponent>

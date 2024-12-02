@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import AnimatedComponent from "./animation";
 
 export const About = (props) => {
@@ -16,7 +17,38 @@ export const About = (props) => {
               <AnimatedComponent animationType="scaleUp">
                 <h2>About Us</h2>
               </AnimatedComponent>
-              <p>{props.data ? props.data.paragraph : "loading..."}</p>
+              <p>{props.data ? props.data.para7 : "loading..."}</p>
+
+              <h2>Our Core Values</h2>
+              <div className="list-style">
+                <div className="col-lg-6 col-sm-6 col-xs-12">
+                  <ul>
+                    {props.data
+                      ? props.data.Why3.map((d, i) => (
+                        <li key={`${d}-${i}`}>{d}</li>
+                      ))
+                      : "loading"}
+                  </ul>
+                </div>
+                <div className="col-lg-6 col-sm-6 col-xs-12">
+                  <ul>
+                    {props.data
+                      ? props.data.Why4.map((d, i) => (
+                        <li key={`${d}-${i}`}>{d}</li>
+                      ))
+                      : "loading"}
+                  </ul>
+                </div>
+              </div>
+
+              {/* Button to redirect to the full about page */}
+              <div className="text-center" style={{ marginTop: "20px" }}>
+                <Link to="/about-page">
+                  <button className="btn btn-custom btn-lg">
+                    Learn More
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

@@ -4,13 +4,15 @@ import AnimatedComponent from './animation';
 export const Cities = () => {
 
     const cities = [
-        'NEW DELHI', 'NOIDA', 'GURGAON', 'CHANDIGARH', 'LUCKNOW',
-        'AMRITSAR', 'BANGALORE', 'HYDERABAD', 'CHENNAI', 'VISAKHAPATNAM',
-        'BHUBANESWAR', 'KOLKOTTA', 'MUMBAI', 'PUNE', 'AHMEDABAD',
-        'SURAT', 'JAIPUR', 'NAGPUR', 'INDORE', 'RAIPUR'
+        'ANDHRA PRADESH', 'ASSAM', 'BIHAR', 'CHHATTISGARH',
+        'GOA', 'GUJRAT', 'HARYANA', 'HIMACHAL PRADESH', 'JHARKHAND', 
+        'KARNATAKA', 'KERALA', 'MADHYA PRADESH', 'MAHARASHTRA', 'NEW DELHI', 
+        'ODISHA', 'PUNJAB', 'RAJASTHAN', 'TAMIL NADU', 'TELANGANA',
+        'TRIPURA', 'UTTAR PRADESH', 'UTTRAKHAND', 'WEST BENGAL', 
     ];
 
     return (
+        < div id='city'>
         <section className="cities-section">
             <AnimatedComponent animationType="scaleUp" >
                 <h2 className="section-heading">We’re Here For You</h2>
@@ -21,6 +23,7 @@ export const Cities = () => {
                 ))}
             </ul>
         </section>
+        </div>
     );
 }
 

@@ -4,20 +4,20 @@ import AnimatedComponent from "./animation";
 const Choose = () => {
     return (
 
-        <div className="chooseContainer">
+        <div id='#choose' className="chooseContainer">
             <div className="col-md-10 col-md-offset-1 section-title">
                 <AnimatedComponent animationType="scaleUp" >
                     <h2 className='service centerAlign'>Why Choose Us ?</h2>
                 </AnimatedComponent>
             </div>
 
-            <div 
-            className="card__container"
+            <div
+                className="card__container"
             >
-                <article 
-                className="card__article"
+                <article
+                    className="card__article"
                 >
-                    <img src="img/image2.jpg" alt="Vancouver Mountains" className="card__img" />
+                    <img src="img/choose/image2.png" alt="Vancouver Mountains" className="card__img" />
 
                     <div className="card__data">
                         <span className="card__title">Choice Of Every Society </span>
@@ -26,7 +26,7 @@ const Choose = () => {
                 </article>
 
                 <article className="card__article">
-                    <img src="img/image.jpg" alt="Poon Hill" className="card__img" />
+                    <img src="img/choose/image.jpg" alt="Poon Hill" className="card__img" />
 
                     <div className="card__data">
                         <span className="card__title">One Step Solution</span>
@@ -35,7 +35,7 @@ const Choose = () => {
                 </article>
 
                 <article className="card__article">
-                    <img src="/img/image3.jpg" alt="Bojcin Forest" className="card__img" />
+                    <img src="/img/choose/image3.jpg" alt="Bojcin Forest" className="card__img" />
 
                     <div className="card__data">
                         <span className="card__title">Data Privacy</span>

@@ -16,12 +16,17 @@ import Choose from "./components/choose";
 import Common from "./components/common";
 import { Industries } from "./components/industries";
 import { Cities } from "./components/cities";
-import { Testimonials } from "./components/testimonials";
 import FAQPage from "./components/faq";
 import Widget from "./components/widget";
 import { Awards } from "./components/awards";
 import { AboutContact } from "./components/aboutContact";
 import { Additional } from "./components/additionalFeatures";
+import { NewTestimonial } from "./components/newTestimonial";
+import { AboutPage } from "./components/aboutPage";
+import { Career } from "./components/career";
+import { ContactUs } from "./components/mailConfig";
+import TermsAndConditions from "./components/termsConditions";
+import PrivacyPolicy from "./components/privacyPolicy";
 
 // Component to handle hash-based scrolling
 const ScrollToSection = () => {
@@ -60,6 +65,7 @@ const App = () => {
             path="/"
             element={
               <>
+                {/* <ContactUs /> */}
                 <Header data={landingPageData.Header} />
                 <About data={landingPageData.About} />
                 <Choose data={landingPageData.Services} />
@@ -72,13 +78,16 @@ const App = () => {
                 <DownloadApp data={landingPageData.DownloadApp} />
                 <Industries />
                 <Cities />
-                <Testimonials data={landingPageData.Testimonials} />
+                {/* <Testimonials data={landingPageData.Testimonials} /> */}
+                <NewTestimonial data={landingPageData.Testimonials} />
                 <FAQPage />
                 <Contact data={landingPageData.Contact} />
                 <Widget data={landingPageData.Widget} />
               </>
             }
           />
+          <Route path="/terms" element={<TermsAndConditions/>} />
+          <Route path="/privacy" element={<PrivacyPolicy/>} />
           <Route
             path="/features"
             element={
@@ -88,11 +97,30 @@ const App = () => {
               />
             }
           />
+          <Route
+            path="/about-page"
+            element={
+              <AboutPage
+                data={landingPageData.About} // Pass the data prop to AboutPage
+              />
+            }
+          />
+
+          <Route
+            path="/career"
+            element={
+              <Career
+                data={landingPageData.About} // Pass the data prop to AboutPage
+              />
+            }
+          />
+
           <Route path="/common/:section" element={<Common />} />
           <Route path="/allFeature" element={<AllFeature
             data={landingPageData.AllFeature}
             societyInfo={landingPageData.SocietyInfo} />} />
         </Routes>
+
       </div>
     </Router>
   );

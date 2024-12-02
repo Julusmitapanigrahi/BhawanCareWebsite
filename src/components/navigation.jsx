@@ -13,6 +13,10 @@ export const Navigation = ({ features,menuData }) => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  const handleCall = () => {
+    window.open('tel:+1800 2575 2244'); // Your phone number
+  };
+
   // Handle click outside the dropdown to close it
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -42,12 +46,32 @@ export const Navigation = ({ features,menuData }) => {
             <span className="icon-bar"></span>
             <span className="icon-bar"></span>
           </button>
-          <Link className="navbar-brand page-scroll" to="/#page-top">
-            <img
-              src="/img/portfolio/logo.png"
-              alt="Logo"
-              style={{ height: '70px' }}
-            />
+          <Link className="navbar-brand page-scroll" to="/#page-top" onClick={() => setActiveSection('home')}>
+            <div
+              style={{ position: 'relative', textAlign: 'center' }}
+              onContextMenu={(e) => {
+                e.preventDefault();
+                alert('Due to privacy reasons, you are not allowed to download this logo.');
+              }}
+            >
+              <img
+                src="/img/portfolio/logo.png"
+                alt="Logo"
+                style={{ height: '120px', width: 'auto', paddingTop: '10px' }}
+                draggable="false"
+              />
+              <div className="logo"
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  backgroundColor: 'transparent',
+                }}
+              ></div>
+            </div>
+
             Bhawan Care
           </Link>
         </div>
@@ -204,8 +228,13 @@ export const Navigation = ({ features,menuData }) => {
               </Link>
             </li>
             <li>
-              <Link to="/#" className="page-scroll">
-                +1800 2575 2244
+              <Link to="/Career">
+                Career
+              </Link>
+            </li>
+            <li>
+              <Link to="/#" className="page-scroll" onClick={handleCall}>
+              +1800-532-6114
               </Link>
 
             </li>
