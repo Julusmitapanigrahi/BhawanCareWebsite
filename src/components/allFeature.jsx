@@ -109,10 +109,10 @@ const AllFeature = ({ data, societyInfo }) => {
     window.scrollTo(0, 0);
   }, []);
 
-  const handleMouseEnter = (index) => setHoveredIndex(index);
-  const handleMouseLeave = () => setHoveredIndex(null);
-  const toggleTextDisplay1 = (index) => setShowTextIndex1(index === showTextIndex1 ? null : index);
-  const toggleTextDisplay2 = (index) => setShowTextIndex2(index === showTextIndex2 ? null : index);
+  // const handleMouseEnter = (index) => setHoveredIndex(index);
+  // const handleMouseLeave = () => setHoveredIndex(null);
+  // const toggleTextDisplay1 = (index) => setShowTextIndex1(index === showTextIndex1 ? null : index);
+  // const toggleTextDisplay2 = (index) => setShowTextIndex2(index === showTextIndex2 ? null : index);
 
   return (
     <ErrorBoundary>
